@@ -16,7 +16,7 @@ class DataM {
         
         var tempArray = [MainCathegories]()
         
-        var mascara = MainCathegories(categories: "Mascara", image: #imageLiteral(resourceName: "mascara"))
+        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
         
            tempArray.append(mascara)
         
