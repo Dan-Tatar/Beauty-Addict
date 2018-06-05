@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeiewController: UIViewController {
+class HomeViewController: UIViewController {
 
     var categories = [MainCathegories]()
     
@@ -18,12 +18,12 @@ class HomeiewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        categories = MainCathegories.dataArray()
+        categories = MainCathegories.categoriesArray()
     }
 
 }
 
-extension HomeiewController: UITableViewDataSource, UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return categories.count
     }

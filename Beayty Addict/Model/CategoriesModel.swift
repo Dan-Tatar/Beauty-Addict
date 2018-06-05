@@ -13,10 +13,11 @@ class MainCathegories {
     
     var category: String
     var image: UIImage
-    
-    init(category: String, image: UIImage) {
+    var products = [Product]()
+    init(category: String, image: UIImage, productList: [Product]) {
         self.category = category
         self.image = image
+        self.products = productList
     }
     
     class Product {
@@ -37,23 +38,62 @@ class MainCathegories {
     
     
     
-    class func dataArray() -> [MainCathegories] {
-        var tempArray = [MainCathegories]()
+    class func categoriesArray() -> [MainCathegories] {
+      
         
-        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
-        var lipstick = MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"))
-        var foundation = MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"))
-        var makeUp = MainCathegories(category: "MakeUp", image: #imageLiteral(resourceName: "makeUp") )
-        
-        tempArray.append(mascara)
-        tempArray.append(lipstick)
-        tempArray.append(foundation)
-        tempArray.append(makeUp)
-        
-        return tempArray
+        return [self.mascaraArray(), self.lipstickArray(), self.foundationArray(), self.makeupArray()]
+//        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
+//        var lipstick = MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"))
+//        var foundation = MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"))
+//        var makeUp = MainCathegories(category: "MakeUp", image: #imageLiteral(resourceName: "makeUp") )
+//
+//        tempArray.append(mascara)
+//        tempArray.append(lipstick)
+//        tempArray.append(foundation)
+//        tempArray.append(makeUp)
+//        mascara.products = Product(name: <#T##String#>, imageProduct: <#T##UIImage#>, description: <#T##String#>, rating: <#T##Double#>)
+//        return tempArray
     }
   
+    class func mascaraArray() -> MainCathegories {
+        
+        var products = [Product]()
+        var maybelline = Product(name: "Maybelline Mascara Lash Sensational",
+                                  imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
+                                  description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
+                                  rating: 8.8)
+        products.append(maybelline)
+        return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: products)
+    }
+    class func lipstickArray() -> MainCathegories {
+        
+        var products = [Product]()
+        var dior = Product(name: "LipstickDior",
+                                 imageProduct: #imageLiteral(resourceName: "lipstickDior"),
+                                 description: "Lipstick designed for all lips",
+                                 rating: 9.8)
+        products.append(dior)
+        return MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"), productList: products)
+    }
     
-   
-    
+    class func foundationArray() -> MainCathegories {
+        
+        var products = [Product]()
+        var macFoundation = Product(name: "Mac Foundation",
+                                 imageProduct: #imageLiteral(resourceName: "macFoundation"),
+                                 description: "Foundation without paraben",
+                                 rating: 7.8)
+        products.append(macFoundation)
+        return MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"), productList: products)
+    }
+    class func makeupArray() -> MainCathegories {
+        
+        var products = [Product]()
+        var maybelline = Product(name: "Makeup",
+                                 imageProduct: #imageLiteral(resourceName: "makeUpChanel-1"),
+                                 description: "High quality makeup",
+                                 rating: 4.8)
+        products.append(maybelline)
+        return MainCathegories(category: "Makeup", image: #imageLiteral(resourceName: "makeUp"), productList: products)
+    }
 }

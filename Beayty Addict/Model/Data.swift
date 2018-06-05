@@ -9,17 +9,18 @@
 import Foundation
 import UIKit
 
+//
+//class DataM {
+//    
+//    func dataArray() -> [MainCathegories] {
+//        
+//        var tempArray = [MainCathegories]()
+//        
+//        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
+//        
+//           tempArray.append(mascara)
+//        
+//        return tempArray
+//}
+//}
 
-class DataM {
-    
-    func dataArray() -> [MainCathegories] {
-        
-        var tempArray = [MainCathegories]()
-        
-        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
-        
-           tempArray.append(mascara)
-        
-        return tempArray
-}
-}
