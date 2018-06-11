@@ -20,21 +20,7 @@ class MainCathegories {
         self.products = productList
     }
     
-    class Product {
-        var name: String
-        var imageProduct: UIImage
-        var description : String
-        var rating: Double
-        
-        init(name: String, imageProduct: UIImage, description: String, rating: Double) {
-            
-            self.name = name
-            self.imageProduct = imageProduct
-            self.description = description
-            self.rating = rating
-        }
-        
-    }
+
     
     
     
@@ -63,6 +49,11 @@ class MainCathegories {
                                   description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
                                   rating: 8.8)
         products.append(maybelline)
+        var xxx = Product(name: " Mascara Lash Sensational",
+                                 imageProduct: #imageLiteral(resourceName: "mascara"),
+                                 description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
+                                 rating: 8.8)
+        products.append(xxx)
         return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: products)
     }
     class func lipstickArray() -> MainCathegories {

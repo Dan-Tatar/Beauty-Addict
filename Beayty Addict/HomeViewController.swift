@@ -20,9 +20,14 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         categories = MainCathegories.categoriesArray()
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ProductsSegue" {
+        let dest = segue.destination as! UINavigationController
+        let segueProduct = dest.topViewController as! ItemViewController
+            segueProduct.items = categories
+    }
 }
-
+}
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return categories.count
@@ -36,5 +41,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+        performSegue(withIdentifier: "ProductsSegue", sender: self)
+//        let vcName = categories[indexPath.row]
+//        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+//        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
