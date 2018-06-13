@@ -11,16 +11,17 @@ import UIKit
 class ItemViewController: UIViewController {
     
   //  var pr: MainCathegories = []
-    var  items: [MainCathegories] = {
-        return MainCathegories.categoriesArray()
-    }()
-    
+    var  items: [MainCathegories] = []
+//    var  items: [MainCathegories] = {
+//        return MainCathegories.categoriesArray()
+//    }()
+    var item: Product?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
     //  items = MainCathegories.categoriesArray()
      tableView.delegate = self
-    tableView.dataSource = self
+     tableView.dataSource = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,9 +35,11 @@ extension ItemViewController:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let category = items[section]
         return category.products.count
+     
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section].products[indexPath.row]
+     //   print(\(items)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as? ProductCell
         cell?.setProducts(list: item)
         return cell!

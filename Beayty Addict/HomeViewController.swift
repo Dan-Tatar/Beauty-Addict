@@ -10,7 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    var categories = [MainCathegories]()
+   var categories = [MainCathegories]()
+   
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,14 +21,32 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         categories = MainCathegories.categoriesArray()
     }
+    func productAtIndexPath(_ indexPath: IndexPath) -> MainCathegories {
+        
+        let category = categories[indexPath.section]
+        return category
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ProductsSegue" {
-        let dest = segue.destination as! UINavigationController
-        let segueProduct = dest.topViewController as! ItemViewController
-            segueProduct.items = categories
+            //   let dest = segue.destination as! UINavigationController
+            if let segueProduct = segue.destination as? ItemViewController {
+            //    segueProduct.items = [categories[2]]
+//                if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell) {
+//                    segueProduct.items = productAtIndexPath(indexPath)
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let selectedRow = indexPath.row
+                    segueProduct.items =  [categories[indexPath.row]]
+            }
+        }
     }
 }
 }
+//let productDetailVC = segue.destination as! ProductDetailViewController
+//if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell) {
+//    productDetailVC.product = productAtIndexPath(indexPath)
+//}
+
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return categories.count
@@ -45,8 +64,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
         performSegue(withIdentifier: "ProductsSegue", sender: self)
-//        let vcName = categories[indexPath.row]
-//        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-//        self.navigationController?.pushViewController(viewController, animated: true)
     }
+  
+
 }

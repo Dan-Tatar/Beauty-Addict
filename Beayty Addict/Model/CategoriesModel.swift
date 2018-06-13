@@ -20,10 +20,6 @@ class MainCathegories {
         self.products = productList
     }
     
-
-    
-    
-    
     class func categoriesArray() -> [MainCathegories] {
       
         
