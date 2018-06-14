@@ -21,19 +21,12 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         categories = MainCathegories.categoriesArray()
     }
-    func productAtIndexPath(_ indexPath: IndexPath) -> MainCathegories {
-        
-        let category = categories[indexPath.section]
-        return category
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ProductsSegue" {
-            //   let dest = segue.destination as! UINavigationController
+     
             if let segueProduct = segue.destination as? ItemViewController {
-            //    segueProduct.items = [categories[2]]
-//                if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell) {
-//                    segueProduct.items = productAtIndexPath(indexPath)
+
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let selectedRow = indexPath.row
                     segueProduct.items =  [categories[indexPath.row]]
@@ -42,10 +35,7 @@ class HomeViewController: UIViewController {
     }
 }
 }
-//let productDetailVC = segue.destination as! ProductDetailViewController
-//if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell) {
-//    productDetailVC.product = productAtIndexPath(indexPath)
-//}
+
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,6 +46,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoriesCell
       // cell.beautyCategoriesImageView.image = category.image
        cell.setCategories(categories: category)
+       cell.selectionStyle = .none
+    
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -64,6 +56,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
         performSegue(withIdentifier: "ProductsSegue", sender: self)
+     
+        tableView.deselectRow(at: indexPath, animated: true)
     }
   
 

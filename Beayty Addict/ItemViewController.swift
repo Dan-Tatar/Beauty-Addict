@@ -42,6 +42,7 @@ extension ItemViewController:  UITableViewDataSource, UITableViewDelegate {
      //   print(\(items)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as? ProductCell
         cell?.setProducts(list: item)
+        cell?.selectionStyle = .none
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
