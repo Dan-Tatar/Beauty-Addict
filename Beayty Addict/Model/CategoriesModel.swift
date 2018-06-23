@@ -40,12 +40,12 @@ class MainCathegories {
     class func mascaraArray() -> MainCathegories {
         
         var products = [Product]()
-        var maybelline = Product(name: "Maybelline Mascara Lash Sensational",
+        let maybelline = Product(name: "Maybelline Mascara Lash Sensational",
                                   imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
                                   description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
                                   rating: 8.8)
         products.append(maybelline)
-        var xxx = Product(name: " Mascara Lash Sensational",
+        let xxx = Product(name: " Mascara Lash Sensational",
                                  imageProduct: #imageLiteral(resourceName: "mascara"),
                                  description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
                                  rating: 8.8)
@@ -55,7 +55,7 @@ class MainCathegories {
     class func lipstickArray() -> MainCathegories {
         
         var products = [Product]()
-        var dior = Product(name: "LipstickDior",
+        let dior = Product(name: "LipstickDior",
                                  imageProduct: #imageLiteral(resourceName: "lipstickDior"),
                                  description: "Lipstick designed for all lips",
                                  rating: 9.8)

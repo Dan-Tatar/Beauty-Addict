@@ -19,9 +19,10 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-    //  items = MainCathegories.categoriesArray()
+//      items = MainCathegories.categoriesArray()
      tableView.delegate = self
      tableView.dataSource = self
+     
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +30,28 @@ class ItemViewController: UIViewController {
         
         tableView.reloadData()
     }
+    func productAtIndexPath(_ indexPath: IndexPath) -> Product
+    {
+        let productLine = items[indexPath.section]
+        return productLine.products[indexPath.row]
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailCell" {
+            let detail = segue.destination as? DetailViewController
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//            //    let selectedRow = indexPath.row
+//                detail?.product =  items[indexPath.row].products
+//
+//            let selectedShoe = self.items[(sender as! IndexPath).row]
+              //   detail?.product =  items[selectedRow.row]
+//
+            if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell) {
+            detail?.product = productAtIndexPath(indexPath)
+                }
+    }
+}
 }
 extension ItemViewController:  UITableViewDataSource, UITableViewDelegate {
     
@@ -48,5 +71,9 @@ extension ItemViewController:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier:  "DetailSegue", sender: self)
+    }
+    
 }
 

@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
             if let segueProduct = segue.destination as? ItemViewController {
 
                 if let indexPath = tableView.indexPathForSelectedRow {
-                    let selectedRow = indexPath.row
+                 //   let selectedRow = indexPath.row
                     segueProduct.items =  [categories[indexPath.row]]
             }
         }
