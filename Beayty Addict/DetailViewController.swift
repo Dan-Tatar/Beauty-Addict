@@ -21,20 +21,18 @@ class DetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.delegate = self
-//        tableView.dataSource = self
-        productName.text = product?.name
-        productImage.image = product?.imageProduct
-        productDescription.text = product?.description
-        productRating.text = String(describing: product?.rating)
-//        setProduct(productDetail: product)
     }
-//    func setProduct(productDetail: Product) {
-//        productName.text = productDetail?.name
-//        productImage.image = productDetail?.imageProduct
-//        productDescription.text = productDetail?.description
-//        productRating.text = String(productDetail?.rating)
-//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setProduct(productDetail: product)
+    }
+    
+    func setProduct(productDetail: Product?) {
+        productName.text = productDetail?.name
+        productImage.image = productDetail?.imageProduct
+        productDescription.text = productDetail?.description
+        productRating.text = String(describing: productDetail?.rating)
+    }
    
 }
 

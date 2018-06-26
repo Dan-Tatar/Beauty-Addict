@@ -10,21 +10,19 @@ import UIKit
 
 class ItemViewController: UIViewController {
     
-  //  var pr: MainCathegories = []
+
     var  items: [MainCathegories] = []
-//    var  items: [MainCathegories] = {
-//        return MainCathegories.categoriesArray()
-//    }()
-    var item: Product?
+    
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//      items = MainCathegories.categoriesArray()
-     tableView.delegate = self
-     tableView.dataSource = self
-     
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -38,31 +36,25 @@ class ItemViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetailCell" {
+        if segue.identifier == "DetailSegue" {
             let detail = segue.destination as? DetailViewController
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//            //    let selectedRow = indexPath.row
-//                detail?.product =  items[indexPath.row].products
-//
-//            let selectedShoe = self.items[(sender as! IndexPath).row]
-              //   detail?.product =  items[selectedRow.row]
-//
-            if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell) {
-            detail?.product = productAtIndexPath(indexPath)
-                }
+            if let indexPath = tableView.indexPathForSelectedRow {
+       
+                detail?.product = productAtIndexPath(indexPath)
+            }
+        }
     }
-}
 }
 extension ItemViewController:  UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let category = items[section]
         return category.products.count
-     
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section].products[indexPath.row]
-     //   print(\(items)")
+        //   print(\(items)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as? ProductCell
         cell?.setProducts(list: item)
         cell?.selectionStyle = .none
