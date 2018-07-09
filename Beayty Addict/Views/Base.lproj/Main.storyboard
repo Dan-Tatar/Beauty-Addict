@@ -142,7 +142,7 @@
                     <navigationItem key="navigationItem" id="0ru-N4-0ck"/>
                     <connections>
                         <outlet property="tableView" destination="eSx-Gl-qUI" id="VVj-WB-fMb"/>
-                        <segue destination="tDd-1O-hRz" kind="showDetail" identifier="DetailSegue" id="KT0-7S-YhE"/>
+                        <segue destination="tDd-1O-hRz" kind="show" identifier="DetailSegue" id="KT0-7S-YhE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqL-cX-uNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,7 +160,7 @@
                         <sections>
                             <tableViewSection id="gCQ-Sh-rxv">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="575" id="Bl1-bR-imw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="575" id="Bl1-bR-imw" customClass="DetailProductCell" customModule="Beayty_Addict" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bl1-bR-imw" id="FXi-nO-T7D">
@@ -209,6 +209,9 @@
                                                     <state key="normal" title="Buy">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="buyProduct:" destination="Bl1-bR-imw" eventType="touchUpInside" id="DI3-1k-QaQ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -237,10 +240,10 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="productDescription" destination="YQR-7P-U5c" id="HIk-QJ-FDL"/>
-                        <outlet property="productImage" destination="UrL-j5-wgG" id="YPY-JI-Unf"/>
-                        <outlet property="productName" destination="ar3-iq-HLS" id="naz-Gh-pHY"/>
-                        <outlet property="productRating" destination="DuQ-36-Tcp" id="Z4L-Ag-sa8"/>
+                        <outlet property="productDescription" destination="YQR-7P-U5c" id="FAn-lw-IIY"/>
+                        <outlet property="productImage" destination="UrL-j5-wgG" id="W0J-Hf-lf2"/>
+                        <outlet property="productName" destination="ar3-iq-HLS" id="VS6-CH-xTF"/>
+                        <outlet property="productRating" destination="DuQ-36-Tcp" id="Gzj-Tf-IzI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRe-e4-cRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
