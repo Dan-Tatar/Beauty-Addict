@@ -30,10 +30,10 @@ class DetailViewController: UITableViewController {
     }
 
     func setProduct(productDetail: Product?) {
-        productName.text = productDetail?.name
-        productImage.image = productDetail?.imageProduct
-        productDescription.text = productDetail?.description
-        productRating.text = String(describing: productDetail?.rating)
+        productName1.text = productDetail?.name
+        productImage1.image = productDetail?.imageProduct
+        productDescription1.text = productDetail?.description
+        productRating1.text = String(describing: productDetail?.rating)
     }
     var productImage1: UIImageView = {
         var imageView = UIImageView()
