@@ -21,8 +21,8 @@ class DetailProductCell:  UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 //        addSubview(productImage1)
 //        addSubview(productName1)
-//        addSubview(cellView)
-      addSubview(productDescription1)
+        self.addSubview(cellView)
+//        cellView.addSubview(productDescription1)
 //        addSubview(productRating1)
         //        self.addSubview(buyProduct1)
         layoutSubviews()
@@ -36,14 +36,14 @@ class DetailProductCell:  UITableViewCell {
     func setProduct(productDetail: Product?) {
 //        productName1.text = productDetail?.name
 //        productImage1.image = productDetail?.imageProduct
-        productDescription1.text = productDetail?.description
+//        productDescription1.text = productDetail?.description
 //        productRating1.text = String(describing: productDetail?.rating)
     }
-//    let cellView: UIView = {
-//        let view = UIView()
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        return view
-//    }()
+    let cellView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 //    var productImage1: UIImageView = {
 //        var imageView = UIImageView()
 //        imageView.contentMode = .scaleToFill
@@ -58,11 +58,11 @@ class DetailProductCell:  UITableViewCell {
 //        return name
 //    }()
 
-    var productDescription1: UITextView = {
-        var description = UITextView()
-        description.translatesAutoresizingMaskIntoConstraints = false
-        return description
-    }()
+//    var productDescription1: UITextView = {
+//        var description = UITextView()
+//        description.translatesAutoresizingMaskIntoConstraints = false
+//        return description
+//    }()
 ////
 //    var productRating1: UILabel = {
 //        var rating = UILabel()
@@ -75,10 +75,10 @@ class DetailProductCell:  UITableViewCell {
 //        return button
 //    }()
     override func layoutSubviews() {
-//        cellView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-//        cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-//        cellView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-//         cellView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        cellView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        cellView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+         cellView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
 //        productName1.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
 //        productName1.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8) .isActive = true
 //        productName1.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 8) .isActive = true
@@ -94,12 +94,14 @@ class DetailProductCell:  UITableViewCell {
 //        productRating1.topAnchor.constraint(equalTo: productName1.bottomAnchor, constant: 8).isActive = true
 //        productRating1.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 8).isActive = true
 //        productRating1.heightAnchor.constraint(equalToConstant: 30).isActive = true
-
-        productDescription1.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
-        productDescription1.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        productDescription1.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
-        productDescription1.heightAnchor.constraint(equalToConstant: 100).isActive = true
+//        productDescription1.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+//        productDescription1.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+//        productDescription1.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+//        productDescription1.heightAnchor.constraint(equalToConstant: 100).isActive = true
+//        
+        
     }
+
 
 
 }
