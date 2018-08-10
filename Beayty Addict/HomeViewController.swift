@@ -18,6 +18,7 @@ class HomeViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Beauty Addict"
         collectionView?.backgroundColor = .white
         categories = MainCathegories.categoriesArray()
         collectionView?.register(CategoriesCell.self, forCellWithReuseIdentifier: categoryID)
