@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CategoriesCell: UICollectionViewCell {
+class CategoriesCell: UITableViewCell {
     
 //    @IBOutlet weak var beautyCategoriesImageView: UIImageView!
     
@@ -17,6 +17,7 @@ class CategoriesCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.clipsToBounds = true
+//        iv.image = UIImage(named: "mascara")
         iv.contentMode = .scaleAspectFill
         return iv
     }()
@@ -28,13 +29,24 @@ class CategoriesCell: UICollectionViewCell {
 //        lineView.isHidden = false
 //        return lineView
 //    }()
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
-      
+
         backgroundColor = .white
-        
     }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        setupViews()
+//      
+//        backgroundColor = .white
+//        
+//    }
+
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -58,4 +70,6 @@ class CategoriesCell: UICollectionViewCell {
 //        separatorLiveView.heightAnchor.constraint(equalToConstant: 1).isActive = true
 //
     }
+    
+    
 }

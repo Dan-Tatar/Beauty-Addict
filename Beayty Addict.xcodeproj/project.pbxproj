@@ -53,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1046A08021204B29006CA6F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				105ED61F20BC4E010058C68D /* HomeViewController.swift */,
+				105ED63820C2F8C50058C68D /* ItemViewController.swift */,
+				10FC728220D3043B00D6244A /* DetailViewController.swift */,
+				105ED62120BC4E010058C68D /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		105ED61120BC4E010058C68D = {
 			isa = PBXGroup;
 			children = (
@@ -73,15 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				105ED61D20BC4E010058C68D /* AppDelegate.swift */,
-				105ED61F20BC4E010058C68D /* HomeViewController.swift */,
-				105ED63820C2F8C50058C68D /* ItemViewController.swift */,
-				10FC728220D3043B00D6244A /* DetailViewController.swift */,
-				105ED62120BC4E010058C68D /* SecondViewController.swift */,
+				105ED63320BCA8BF0058C68D /* Model */,
+				1046A08021204B29006CA6F5 /* Controllers */,
 				10FC727F20C8690200D6244A /* Views */,
 				105ED62620BC4E010058C68D /* Assets.xcassets */,
 				105ED62820BC4E010058C68D /* LaunchScreen.storyboard */,
 				105ED62B20BC4E010058C68D /* Info.plist */,
-				105ED63320BCA8BF0058C68D /* Model */,
 			);
 			path = "Beayty Addict";
 			sourceTree = "<group>";
@@ -100,8 +108,8 @@
 			children = (
 				105ED62320BC4E010058C68D /* Main.storyboard */,
 				1046A07E210FAB2A006CA6F5 /* dsds.storyboard */,
-				10FC728020C8693700D6244A /* ProductCell.swift */,
 				105ED63620BDBDC50058C68D /* CategoriesCell.swift */,
+				10FC728020C8693700D6244A /* ProductCell.swift */,
 				10FC728420D3ADB800D6244A /* DetailProductCell.swift */,
 			);
 			path = Views;
