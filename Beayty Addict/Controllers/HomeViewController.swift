@@ -101,8 +101,8 @@ extension HomeViewController {
 //        performSegue(withIdentifier: "ProductsSegue", sender: self)
         let itemViewController = ItemViewController()
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-                                        itemViewController.items =  [categories[indexPath.row]]
+        if let selectedRow = tableView.indexPathForSelectedRow {
+                                        itemViewController.items =  [categories[selectedRow.row]]
                                     }
 
                   navigationController?.pushViewController( itemViewController, animated: true)

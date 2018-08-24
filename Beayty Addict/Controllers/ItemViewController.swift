@@ -13,6 +13,7 @@ class ItemViewController:  UITableViewController {
     
     var  items: [MainCathegories] = []
     
+     let productID =  "productID"
     
 //    var tableView: UITableView = {
 //        let tb = UITableView()
@@ -34,7 +35,7 @@ class ItemViewController:  UITableViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+         tableView.register(ProductCell.self, forCellReuseIdentifier:  productID)
 //        setupViews()
     }
     
@@ -70,8 +71,8 @@ extension ItemViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section].products[indexPath.row]
-        //   print(\(items)")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as? ProductCell
+  
+        let cell = tableView.dequeueReusableCell(withIdentifier: productID) as? ProductCell
         cell?.setProducts(list: item)
         cell?.selectionStyle = .none
         return cell!
@@ -84,6 +85,7 @@ extension ItemViewController {
         let detailViewController = DetailViewController()
         navigationController?.pushViewController( detailViewController, animated: true)
     }
+    
     
 }
 
