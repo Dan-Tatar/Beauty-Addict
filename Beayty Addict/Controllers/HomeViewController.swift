@@ -33,48 +33,7 @@ class HomeViewController: UITableViewController {
   
     }
     
-//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return categories.count
-//    }
-//
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let category =  categories[indexPath.row]
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoryID, for: indexPath) as! CategoriesCell
-//        //   cell.backgroundColor = .red
-//        cell.setCategories(categories: category)
-//        return cell
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: view.frame.width, height: 250)
-//    }
-//
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//          let itemViewController = ItemViewController()
-//
-//        if let indexPath = collectionView.indexPathsForSelectedItems {
-//                                itemViewController.items =  [categories[indexPath.row]]
-//                            }
-//          navigationController?.pushViewController( itemViewController, animated: true)
-//        performSegue(withIdentifier: "ProductsSegue", sender: self)
-//
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ProductsSegue" {
-//
-//            if let segueProduct = segue.destination as? ItemViewController {
-//
-//                if let indexPath = tableView.indexPathForSelectedRow {
-//                    segueProduct.items =  [categories[indexPath.row]]
-//                }
-//            }
-//        }
-//    }
+
 }
 
 extension HomeViewController {
@@ -98,7 +57,7 @@ extension HomeViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        performSegue(withIdentifier: "ProductsSegue", sender: self)
+
         let itemViewController = ItemViewController()
         
         if let selectedRow = tableView.indexPathForSelectedRow {

@@ -15,21 +15,6 @@ class ItemViewController:  UITableViewController {
     
      let productID =  "productID"
     
-//    var tableView: UITableView = {
-//        let tb = UITableView()
-//        tb.translatesAutoresizingMaskIntoConstraints = false
-//        return tb
-//    }()
-    
-//    func setupViews() {
-////        view.addSubview(tableView)
-//        
-//        tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-//        tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-//        tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-//        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-//    }
-    //  @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,8 +66,12 @@ extension ItemViewController {
         return 100
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier:  "DetailSegue", sender: self)
+
         let detailViewController = DetailViewController()
+        if let selectedRow = tableView.indexPathForSelectedRow {
+             detailViewController.product =  items[indexPath.section].products[indexPath.row]
+        }
+       
         navigationController?.pushViewController( detailViewController, animated: true)
     }
     

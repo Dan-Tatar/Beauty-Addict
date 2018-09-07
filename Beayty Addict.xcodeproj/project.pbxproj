@@ -37,6 +37,7 @@
 		105ED63420BCA8FB0058C68D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		105ED63620BDBDC50058C68D /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		105ED63820C2F8C50058C68D /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		1080DB78213C4F8C00364680 /* MyPlayground0909.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground0909.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		10FC728020C8693700D6244A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		10FC728220D3043B00D6244A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		10FC728420D3ADB800D6244A /* DetailProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductCell.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		105ED61120BC4E010058C68D = {
 			isa = PBXGroup;
 			children = (
+				1080DB78213C4F8C00364680 /* MyPlayground0909.playground */,
 				105ED61C20BC4E010058C68D /* Beayty Addict */,
 				105ED61B20BC4E010058C68D /* Products */,
 			);

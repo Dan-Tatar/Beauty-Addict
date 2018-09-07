@@ -8,20 +8,20 @@
 
 import UIKit
 
-class DetailViewController: UITableViewController {
+class DetailViewController: UIViewController {
 
     var product : Product?
    
     
-    @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var productDescription: UILabel!
-    @IBOutlet weak var productRating: UILabel!
+//    @IBOutlet weak var productImage: UIImageView!
+//    @IBOutlet weak var productName: UILabel!
+//    @IBOutlet weak var productDescription: UILabel!
+//    @IBOutlet weak var productRating: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-           view.addSubview(productImage1)
+        view.backgroundColor = UIColor.white
+         view.addSubview(productImage1)
         layoutSubviews()
     }
     
@@ -38,8 +38,10 @@ class DetailViewController: UITableViewController {
     var productImage1: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
+        imageView.layer.borderColor = UIColor.black.cgColor
+        imageView.layer.borderWidth = 0.5
         return imageView
     }()
     
@@ -67,9 +69,9 @@ class DetailViewController: UITableViewController {
     }()
      func layoutSubviews() {
         productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
-        productImage1.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
-        productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 8).isActive = true
-      //    productImage1.rightAnchor.constraint(equalTo: <#T##NSLayoutAnchor<NSLayoutXAxisAnchor>#>, constant: <#T##CGFloat#>)
+        productImage1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor , constant: 8).isActive = true
+        productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
+          productImage1.heightAnchor.constraint(equalToConstant: 260).isActive = true
     //    productImage1.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
     }
 //    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

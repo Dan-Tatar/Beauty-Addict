@@ -11,12 +11,6 @@ import UIKit
 
 class ProductCell: UITableViewCell {
     
-//    @IBOutlet weak var imageProduct: UIImageView!
-//
-//    @IBOutlet weak var nameProduct: UILabel!
-//
-//    @IBOutlet weak var ratingProduct: UILabel!
-    
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,6 +32,7 @@ class ProductCell: UITableViewCell {
         ip.layer.masksToBounds = true
         ip.layer.borderWidth = 0.2
         ip.layer.cornerRadius = 10
+//        ip.contentMode = .scaleToFill
         return ip
     }()
     var nameProduct: UITextView = {
