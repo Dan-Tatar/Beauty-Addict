@@ -21,7 +21,12 @@ class ItemViewController:  UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
          tableView.register(ProductCell.self, forCellReuseIdentifier:  productID)
+         navigationItem.backBarButtonItem?.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = .purple
+        
 //        setupViews()
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

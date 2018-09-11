@@ -23,6 +23,8 @@ class DetailViewController: UIViewController {
         view.backgroundColor = UIColor.white
          view.addSubview(productImage1)
         layoutSubviews()
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,7 +73,7 @@ class DetailViewController: UIViewController {
         productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
         productImage1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor , constant: 8).isActive = true
         productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
-          productImage1.heightAnchor.constraint(equalToConstant: 260).isActive = true
+          productImage1.heightAnchor.constraint(equalToConstant: 300).isActive = true
     //    productImage1.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
     }
 //    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
