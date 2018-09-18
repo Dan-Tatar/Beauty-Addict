@@ -10,12 +10,7 @@ import UIKit
 
 class DetailProductCell:  UITableViewCell {
 
-//    @IBOutlet weak var productImage: UIImageView!
-//    @IBOutlet weak var productName: UILabel!
-//    @IBOutlet weak var productDescription: UILabel!
-//    @IBOutlet weak var productRating: UILabel!
-//    @IBAction func buyProduct(_ sender: UIButton) {
-//    }
+
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

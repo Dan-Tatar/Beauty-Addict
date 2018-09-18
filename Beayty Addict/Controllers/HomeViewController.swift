@@ -14,26 +14,26 @@ class HomeViewController: UITableViewController {
     
     let categoryID =  "categoryID"
     
-//   var tableView: UITableView = UITableView()
+    //   var tableView: UITableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         navigationItem.title = "Beauty Addict"
-
+        
         categories = MainCathegories.categoriesArray()
         
-//        collectionView?.register(CategoriesCell.self, forCellWithReuseIdentifier: categoryID)
-//        collectionView?.backgroundColor = .white
+        //        collectionView?.register(CategoriesCell.self, forCellWithReuseIdentifier: categoryID)
+        //        collectionView?.backgroundColor = .white
         tableView.backgroundColor = .white
-//        tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain )
+        //        tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain )
         tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)
-//         self.view.addSubview(tableView)
-  
+        //         self.view.addSubview(tableView)
+        
     }
     
-
+    
 }
 
 extension HomeViewController {
@@ -45,8 +45,8 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let category =  categories[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: categoryID, for: indexPath) as! CategoriesCell
-//         cell.beautyCategoriesImageView.image = category.image
-
+        //         cell.beautyCategoriesImageView.image = category.image
+        
         cell.setCategories(categories: category)
         cell.selectionStyle = .none
         
@@ -57,14 +57,14 @@ extension HomeViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-
+        
         let itemViewController = ItemViewController()
         
         if let selectedRow = tableView.indexPathForSelectedRow {
-                                        itemViewController.items =  [categories[selectedRow.row]]
-                                    }
-
-                  navigationController?.pushViewController( itemViewController, animated: true)
+            itemViewController.items =  [categories[selectedRow.row]]
+        }
+        
+        navigationController?.pushViewController( itemViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

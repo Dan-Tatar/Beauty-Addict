@@ -11,19 +11,12 @@ import UIKit
 class DetailViewController: UIViewController {
 
     var product : Product?
-   
-    
-//    @IBOutlet weak var productImage: UIImageView!
-//    @IBOutlet weak var productName: UILabel!
-//    @IBOutlet weak var productDescription: UILabel!
-//    @IBOutlet weak var productRating: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-         view.addSubview(productImage1)
+       
         layoutSubviews()
-
         
     }
     
@@ -35,8 +28,11 @@ class DetailViewController: UIViewController {
         productName1.text = productDetail?.name
         productImage1.image = productDetail?.imageProduct
         productDescription1.text = productDetail?.description
-        productRating1.text = String(describing: productDetail?.rating)
+        if let rating = productDetail?.rating {
+        productRating1.text = "Rating " + String(rating)
+        }
     }
+    
     var productImage1: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,12 +45,14 @@ class DetailViewController: UIViewController {
     
     var productName1: UILabel = {
         var name = UILabel()
+        name.font = UIFont.boldSystemFont(ofSize: 21)
         name.translatesAutoresizingMaskIntoConstraints = false
         return name
     }()
     
-    var productDescription1: UILabel = {
-        var description = UILabel()
+    var productDescription1: UITextView = {
+        var description = UITextView()
+        description.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         description.translatesAutoresizingMaskIntoConstraints = false
         return description
     }()
@@ -67,14 +65,49 @@ class DetailViewController: UIViewController {
     var buyProduct1 : UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 10
+        button.backgroundColor = UIColor.black
+        button.setTitle( "Buy", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.titleLabel?.textColor = UIColor.black
         return button
     }()
-     func layoutSubviews() {
+    func layoutSubviews() {
+        
+        view.addSubview(productImage1)
+        view.addSubview(productName1)
+        view.addSubview(productDescription1)
+        view.addSubview(productRating1)
+        view.addSubview(buyProduct1)
+        
+        // ProductImage constraints
         productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
         productImage1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor , constant: 8).isActive = true
         productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
-          productImage1.heightAnchor.constraint(equalToConstant: 300).isActive = true
-    //    productImage1.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
+        productImage1.heightAnchor.constraint(equalToConstant: 300).isActive = true
+         // ProductName constraints
+        productName1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        productName1.topAnchor.constraint(equalTo: productImage1.bottomAnchor , constant: 8).isActive = true
+        productName1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        productName1.heightAnchor.constraint(equalToConstant: 40).isActive = true
+          // ProductDesription constraints
+        productDescription1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        productDescription1.topAnchor.constraint(equalTo: productName1.bottomAnchor , constant: 8).isActive = true
+        productDescription1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+//          productDescription1.bottomAnchor.constraint(equalTo: productRating1.topAnchor, constant: 15).isActive = true
+        productDescription1.heightAnchor.constraint(equalToConstant: 150).isActive = true
+    
+        //productRating constraints
+        productRating1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        productRating1.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
+        productRating1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        productRating1.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        // buyProduct constraints
+        buyProduct1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        buyProduct1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: -20).isActive = true
+        buyProduct1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        buyProduct1.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
 //    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 //        super.init(style: style, reuseIdentifier: reuseIdentifier)

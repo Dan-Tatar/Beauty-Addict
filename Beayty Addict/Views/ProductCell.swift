@@ -75,7 +75,5 @@ class ProductCell: UITableViewCell {
         imageProduct.image = list.imageProduct
         nameProduct.text = list.name
         ratingProduct.text = "Rating  " + String(list.rating)
-        
-        
     }
 }

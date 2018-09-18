@@ -21,34 +21,34 @@ class MainCathegories {
     }
     
     class func categoriesArray() -> [MainCathegories] {
-      
+        
         
         return [self.mascaraArray(), self.lipstickArray(), self.foundationArray(), self.makeupArray()]
-//        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
-//        var lipstick = MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"))
-//        var foundation = MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"))
-//        var makeUp = MainCathegories(category: "MakeUp", image: #imageLiteral(resourceName: "makeUp") )
-//
-//        tempArray.append(mascara)
-//        tempArray.append(lipstick)
-//        tempArray.append(foundation)
-//        tempArray.append(makeUp)
-//        mascara.products = Product(name: <#T##String#>, imageProduct: <#T##UIImage#>, description: <#T##String#>, rating: <#T##Double#>)
-//        return tempArray
+        //        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
+        //        var lipstick = MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"))
+        //        var foundation = MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"))
+        //        var makeUp = MainCathegories(category: "MakeUp", image: #imageLiteral(resourceName: "makeUp") )
+        //
+        //        tempArray.append(mascara)
+        //        tempArray.append(lipstick)
+        //        tempArray.append(foundation)
+        //        tempArray.append(makeUp)
+        //        mascara.products = Product(name: <#T##String#>, imageProduct: <#T##UIImage#>, description: <#T##String#>, rating: <#T##Double#>)
+        //        return tempArray
     }
-  
+    
     class func mascaraArray() -> MainCathegories {
         
         var products = [Product]()
         let maybelline = Product(name: "Maybelline Mascara Lash Sensational",
-                                  imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
-                                  description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
-                                  rating: 8.8)
-        products.append(maybelline)
-        let xxx = Product(name: " Mascara Lash Sensational",
-                                 imageProduct: #imageLiteral(resourceName: "mascara"),
+                                 imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
                                  description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
                                  rating: 8.8)
+        products.append(maybelline)
+        let xxx = Product(name: " Mascara Lash Sensational",
+                          imageProduct: #imageLiteral(resourceName: "mascara"),
+                          description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
+                          rating: 8.8)
         products.append(xxx)
         return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: products)
     }
@@ -56,9 +56,9 @@ class MainCathegories {
         
         var products = [Product]()
         let dior = Product(name: "LipstickDior",
-                                 imageProduct: #imageLiteral(resourceName: "lipstickDior"),
-                                 description: "Lipstick designed for all lips",
-                                 rating: 9.8)
+                           imageProduct: #imageLiteral(resourceName: "lipstickDior"),
+                           description: "Lipstick designed for all lips",
+                           rating: 9.8)
         products.append(dior)
         return MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"), productList: products)
     }
@@ -67,9 +67,9 @@ class MainCathegories {
         
         var products = [Product]()
         var macFoundation = Product(name: "Mac Foundation",
-                                 imageProduct: #imageLiteral(resourceName: "macFoundation"),
-                                 description: "Foundation without paraben",
-                                 rating: 7.8)
+                                    imageProduct: #imageLiteral(resourceName: "macFoundation"),
+                                    description: "Foundation without paraben",
+                                    rating: 7.8)
         products.append(macFoundation)
         return MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"), productList: products)
     }

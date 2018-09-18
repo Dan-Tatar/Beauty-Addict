@@ -16,11 +16,9 @@ class Product {
     var rating: Double
     
     init(name: String, imageProduct: UIImage, description: String, rating: Double) {
-        
         self.name = name
         self.imageProduct = imageProduct
         self.description = description
         self.rating = rating
     }
-    
 }
