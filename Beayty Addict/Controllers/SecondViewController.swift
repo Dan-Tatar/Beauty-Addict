@@ -12,14 +12,32 @@ class ReviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      view.backgroundColor = UIColor(white: 0, alpha: 0.4)
+       layoutSubviews()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+ 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
+    
+
+    let reviewUIView: UIView = {
+       let RU = UIView()
+        RU.translatesAutoresizingMaskIntoConstraints = false
+        RU.backgroundColor = UIColor.white
+        return RU
+    }()
+
+    func layoutSubviews() {
+    
+        view.addSubview(reviewUIView)
+        
+        reviewUIView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        reviewUIView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        reviewUIView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        reviewUIView.widthAnchor.constraint(equalToConstant: 350).isActive = true
+    }
+    
 
 
-}
-
+ }

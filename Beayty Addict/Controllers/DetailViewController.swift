@@ -77,7 +77,10 @@ class DetailViewController: UIViewController {
     }()
     @objc func review() {
         let reviewViewController = ReviewViewController()
-        navigationController?.pushViewController(reviewViewController, animated: true)
+        
+        reviewViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.present(reviewViewController, animated: true)
+        
     }
     //    var buyProduct1 : UIButton = {
     //        var button = UIButton()
@@ -124,15 +127,14 @@ class DetailViewController: UIViewController {
         //productRating constraints
         productRating1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         productRating1.topAnchor.constraint(equalTo: productDescription1.bottomAnchor, constant: 8).isActive = true
-//        productRating1.rightAnchor.constraint(equalTo: addReview.leftAnchor, constant: 15).isActive = true
         productRating1.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         // addReview constraints
-//                addReview.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
-                addReview.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
-                addReview.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-                addReview.heightAnchor.constraint(equalToConstant: 30).isActive = true
-         addReview.widthAnchor.constraint(equalToConstant: 110).isActive = true
+
+        addReview.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
+        addReview.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        addReview.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        addReview.widthAnchor.constraint(equalToConstant: 110).isActive = true
         // buyProduct constraints
 //        buyProduct1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
 //        buyProduct1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: -20).isActive = true
