@@ -62,23 +62,47 @@ class DetailViewController: UIViewController {
         rating.translatesAutoresizingMaskIntoConstraints = false
         return rating
     }()
-    var buyProduct1 : UIButton = {
+    var addReview : UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
         button.backgroundColor = UIColor.black
-        button.setTitle( "Buy", for: .normal)
+        button.layer.borderColor = UIColor.black.cgColor
+        button.setTitle( "Add Review", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.titleLabel?.textColor = UIColor.black
+        button.titleLabel?.textColor = UIColor.white
+        button.addTarget(self, action:  #selector(review), for: .touchUpInside)
         return button
     }()
+    @objc func review() {
+        let reviewViewController = ReviewViewController()
+        navigationController?.pushViewController(reviewViewController, animated: true)
+    }
+    //    var buyProduct1 : UIButton = {
+    //        var button = UIButton()
+    //        button.translatesAutoresizingMaskIntoConstraints = false
+    //        button.layer.cornerRadius = 10
+    //        button.backgroundColor = UIColor.black
+    //        button.setTitle( "Buy", for: .normal)
+    //        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+    //        button.titleLabel?.textColor = UIColor.black
+    //        button.addTarget(self, action:  #selector(accessButton), for: .touchUpInside)
+    //        return button
+    //    }()
+//    @objc func accessButton() {
+//        if let url = URL(string: ((product?.url)!)) {
+//            UIApplication.shared.open(url)
+//        }
+//    }
     func layoutSubviews() {
         
         view.addSubview(productImage1)
         view.addSubview(productName1)
         view.addSubview(productDescription1)
         view.addSubview(productRating1)
-        view.addSubview(buyProduct1)
+         view.addSubview(addReview)
+//        view.addSubview(buyProduct1)
         
         // ProductImage constraints
         productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
@@ -99,15 +123,21 @@ class DetailViewController: UIViewController {
     
         //productRating constraints
         productRating1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
-        productRating1.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
-        productRating1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-        productRating1.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        productRating1.topAnchor.constraint(equalTo: productDescription1.bottomAnchor, constant: 8).isActive = true
+//        productRating1.rightAnchor.constraint(equalTo: addReview.leftAnchor, constant: 15).isActive = true
+        productRating1.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
+        // addReview constraints
+//                addReview.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+                addReview.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
+                addReview.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+                addReview.heightAnchor.constraint(equalToConstant: 30).isActive = true
+         addReview.widthAnchor.constraint(equalToConstant: 110).isActive = true
         // buyProduct constraints
-        buyProduct1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
-        buyProduct1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: -20).isActive = true
-        buyProduct1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-        buyProduct1.heightAnchor.constraint(equalToConstant: 40).isActive = true
+//        buyProduct1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+//        buyProduct1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: -20).isActive = true
+//        buyProduct1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+//        buyProduct1.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
 //    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 //        super.init(style: style, reuseIdentifier: reuseIdentifier)

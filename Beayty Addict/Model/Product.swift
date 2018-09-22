@@ -14,11 +14,13 @@ class Product {
     var imageProduct: UIImage
     var description : String
     var rating: Double
+    var url: String
     
-    init(name: String, imageProduct: UIImage, description: String, rating: Double) {
+    init(name: String, imageProduct: UIImage, description: String, rating: Double, url: String) {
         self.name = name
         self.imageProduct = imageProduct
         self.description = description
         self.rating = rating
+        self.url = url
     }
 }
