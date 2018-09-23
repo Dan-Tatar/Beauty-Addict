@@ -10,7 +10,7 @@
 		1046A07F210FAB2A006CA6F5 /* dsds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1046A07E210FAB2A006CA6F5 /* dsds.storyboard */; };
 		105ED61E20BC4E010058C68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED61D20BC4E010058C68D /* AppDelegate.swift */; };
 		105ED62020BC4E010058C68D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED61F20BC4E010058C68D /* HomeViewController.swift */; };
-		105ED62220BC4E010058C68D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED62120BC4E010058C68D /* SecondViewController.swift */; };
+		105ED62220BC4E010058C68D /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED62120BC4E010058C68D /* ReviewViewController.swift */; };
 		105ED62520BC4E010058C68D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105ED62320BC4E010058C68D /* Main.storyboard */; };
 		105ED62720BC4E010058C68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105ED62620BC4E010058C68D /* Assets.xcassets */; };
 		105ED62A20BC4E010058C68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105ED62820BC4E010058C68D /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		105ED61A20BC4E010058C68D /* Beayty Addict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beayty Addict.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		105ED61D20BC4E010058C68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105ED61F20BC4E010058C68D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		105ED62120BC4E010058C68D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		105ED62120BC4E010058C68D /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		105ED62420BC4E010058C68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		105ED62620BC4E010058C68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105ED62920BC4E010058C68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 				105ED61F20BC4E010058C68D /* HomeViewController.swift */,
 				105ED63820C2F8C50058C68D /* ItemViewController.swift */,
 				10FC728220D3043B00D6244A /* DetailViewController.swift */,
-				105ED62120BC4E010058C68D /* SecondViewController.swift */,
+				105ED62120BC4E010058C68D /* ReviewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 			files = (
 				10FC728320D3043B00D6244A /* DetailViewController.swift in Sources */,
 				105ED63920C2F8C50058C68D /* ItemViewController.swift in Sources */,
-				105ED62220BC4E010058C68D /* SecondViewController.swift in Sources */,
+				105ED62220BC4E010058C68D /* ReviewViewController.swift in Sources */,
 				105ED63520BCA8FB0058C68D /* Product.swift in Sources */,
 				105ED61E20BC4E010058C68D /* AppDelegate.swift in Sources */,
 				105ED63720BDBDC50058C68D /* CategoriesCell.swift in Sources */,

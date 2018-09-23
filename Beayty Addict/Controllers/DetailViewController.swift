@@ -71,7 +71,7 @@ class DetailViewController: UIViewController {
         button.layer.borderColor = UIColor.black.cgColor
         button.setTitle( "Add Review", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.titleLabel?.textColor = UIColor.white
+        button.titleLabel?.textColor = UIColor.blue
         button.addTarget(self, action:  #selector(review), for: .touchUpInside)
         return button
     }()
