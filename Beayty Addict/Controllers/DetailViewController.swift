@@ -9,13 +9,13 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     var product : Product?
-
+    let reviewCell = "ReviewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-       
         layoutSubviews()
         
     }
@@ -23,13 +23,13 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setProduct(productDetail: product)
     }
-
+    
     func setProduct(productDetail: Product?) {
         productName1.text = productDetail?.name
         productImage1.image = productDetail?.imageProduct
         productDescription1.text = productDetail?.description
         if let rating = productDetail?.rating {
-        productRating1.text = "Rating " + String(rating)
+            productRating1.text = "Rating " + String(rating)
         }
     }
     
@@ -62,109 +62,130 @@ class DetailViewController: UIViewController {
         rating.translatesAutoresizingMaskIntoConstraints = false
         return rating
     }()
-    var addReview : UIButton = {
+    
+    var seeReviews : UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 2
         button.backgroundColor = UIColor.black
         button.layer.borderColor = UIColor.black.cgColor
-        button.setTitle( "Add Review", for: .normal)
+        button.setTitle( "See Reviews", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.titleLabel?.textColor = UIColor.blue
         button.addTarget(self, action:  #selector(review), for: .touchUpInside)
         return button
     }()
     @objc func review() {
-        let reviewViewController = ReviewViewController()
-        
-        reviewViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        self.present(reviewViewController, animated: true)
+        let reviewViewController = ReviewsViewController()
+
+        navigationController?.pushViewController(reviewViewController, animated: true)
         
     }
-    //    var buyProduct1 : UIButton = {
-    //        var button = UIButton()
-    //        button.translatesAutoresizingMaskIntoConstraints = false
-    //        button.layer.cornerRadius = 10
-    //        button.backgroundColor = UIColor.black
-    //        button.setTitle( "Buy", for: .normal)
-    //        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-    //        button.titleLabel?.textColor = UIColor.black
-    //        button.addTarget(self, action:  #selector(accessButton), for: .touchUpInside)
-    //        return button
-    //    }()
-//    @objc func accessButton() {
-//        if let url = URL(string: ((product?.url)!)) {
-//            UIApplication.shared.open(url)
-//        }
-//    }
+    var tableView: UITableView = {
+        var tv = UITableView()
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        return tv
+    }()
+    
     func layoutSubviews() {
         
         view.addSubview(productImage1)
         view.addSubview(productName1)
         view.addSubview(productDescription1)
         view.addSubview(productRating1)
-         view.addSubview(addReview)
-//        view.addSubview(buyProduct1)
+        view.addSubview(seeReviews)
+        view.addSubview(tableView)
         
-        // ProductImage constraints
+        // productImage constraints
         productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
         productImage1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor , constant: 8).isActive = true
         productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
         productImage1.heightAnchor.constraint(equalToConstant: 300).isActive = true
-         // ProductName constraints
+        
+        // ProductName constraints
         productName1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         productName1.topAnchor.constraint(equalTo: productImage1.bottomAnchor , constant: 8).isActive = true
         productName1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
         productName1.heightAnchor.constraint(equalToConstant: 40).isActive = true
-          // ProductDesription constraints
+        
+        // productDesription constraints
         productDescription1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         productDescription1.topAnchor.constraint(equalTo: productName1.bottomAnchor , constant: 8).isActive = true
         productDescription1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-//          productDescription1.bottomAnchor.constraint(equalTo: productRating1.topAnchor, constant: 15).isActive = true
+
         productDescription1.heightAnchor.constraint(equalToConstant: 150).isActive = true
-    
+        
         //productRating constraints
         productRating1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         productRating1.topAnchor.constraint(equalTo: productDescription1.bottomAnchor, constant: 8).isActive = true
         productRating1.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        // addReview constraints
+        // seeReview constraints
+        seeReviews.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
+        seeReviews.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        seeReviews.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        seeReviews.widthAnchor.constraint(equalToConstant: 110).isActive = true
+        
+        // tableView constraints
+        tableView.topAnchor.constraint(equalTo: productRating1.bottomAnchor , constant: 8).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 15).isActive = true
+    }
+}
 
-        addReview.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
-        addReview.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-        addReview.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        addReview.widthAnchor.constraint(equalToConstant: 110).isActive = true
-        // buyProduct constraints
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+//     init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//        view.addSubview(productImage1)
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+
+//    var buyProduct1 : UIButton = {
+//        var button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.layer.cornerRadius = 10
+//        button.backgroundColor = UIColor.black
+//        button.setTitle( "Buy", for: .normal)
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+//        button.titleLabel?.textColor = UIColor.black
+//        button.addTarget(self, action:  #selector(accessButton), for: .touchUpInside)
+//        return button
+//    }()
+//    @objc func accessButton() {
+//        if let url = URL(string: ((product?.url)!)) {
+//            UIApplication.shared.open(url)
+//        }
+//    }
+
+
+// buyProduct constraints
 //        buyProduct1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
 //        buyProduct1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: -20).isActive = true
 //        buyProduct1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
 //        buyProduct1.heightAnchor.constraint(equalToConstant: 40).isActive = true
-    }
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        view.addSubview(productImage1)
-////        self.addSubview(productName1)
-////        self.addSubview(productDescription1)
-////        self.addSubview(productRating1)
-////        self.addSubview(buyProduct1)
-//
-//    }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//    //
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        var detail = product
-//
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as? DetailProductCell
-//        cell?.setProduct(productDetail: product)
-//        return cell!
-//    }
-}
 
+
+//        let reviewViewController = ReviewsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+//

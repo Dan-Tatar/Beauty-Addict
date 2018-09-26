@@ -33,7 +33,7 @@ class CategoriesCell: UITableViewCell {
     func setCategories(categories: MainCathegories) {
         beautyCategoriesImageView.image = categories.image
     }
-    
+   
     func setupViews() {
         addSubview(beautyCategoriesImageView)
         

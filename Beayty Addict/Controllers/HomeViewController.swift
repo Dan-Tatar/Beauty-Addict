@@ -25,7 +25,6 @@ class HomeViewController: UITableViewController {
         categories = MainCathegories.categoriesArray()
         
         //        collectionView?.register(CategoriesCell.self, forCellWithReuseIdentifier: categoryID)
-        //        collectionView?.backgroundColor = .white
         tableView.backgroundColor = .white
         //        tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain )
         tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)

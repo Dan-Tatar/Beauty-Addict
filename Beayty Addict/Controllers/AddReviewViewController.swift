@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReviewViewController: UIViewController {
+class AllReviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class ReviewViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-
     let reviewUIView: UIView = {
        let RU = UIView()
         RU.translatesAutoresizingMaskIntoConstraints = false
@@ -57,12 +56,28 @@ class ReviewViewController: UIViewController {
     @objc func cancelPressed() {
         dismiss(animated: true, completion: nil)
     }
+    
+    let saveButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.blue, for: .normal)
+        button.backgroundColor = UIColor.white
+        button.addTarget(self, action:  #selector(cancelPressed), for: .touchUpInside)
+        button.setTitle("Save", for: .normal)
+        return button
+    }()
+    
+    @objc func savePressed() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func layoutSubviews() {
     
         view.addSubview(reviewUIView)
         reviewUIView.addSubview(cancelButton)
         reviewUIView.addSubview(titleLabel)
         reviewUIView.addSubview(review)
+        reviewUIView.addSubview(saveButton)
         
         // titleLabel constraints
         titleLabel.topAnchor.constraint(equalTo: reviewUIView.topAnchor, constant: 8).isActive = true
@@ -82,6 +97,13 @@ class ReviewViewController: UIViewController {
         cancelButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         cancelButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
+        // cancelButton constraints
+        saveButton.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: 8).isActive = true
+        saveButton.bottomAnchor.constraint(equalTo: reviewUIView.bottomAnchor, constant: -8).isActive = true
+        saveButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        saveButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        
+        // review contraints
         review.centerYAnchor.constraint(equalTo: reviewUIView.centerYAnchor).isActive = true
         review.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 12).isActive = true
         review.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -12).isActive = true

@@ -22,7 +22,7 @@ class ItemViewController:  UITableViewController {
         tableView.dataSource = self
         tableView.register(ProductCell.self, forCellReuseIdentifier:  productID)
         navigationItem.backBarButtonItem?.tintColor = UIColor.white
-        navigationController?.navigationBar.barTintColor = .purple
+        navigationController?.navigationBar.barTintColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
         
         //        setupViews()
         

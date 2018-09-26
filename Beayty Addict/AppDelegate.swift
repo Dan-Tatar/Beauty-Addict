@@ -21,11 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let homeController = HomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let homeController = HomeViewController()
         window?.rootViewController = UINavigationController(rootViewController: homeController)
-        UINavigationBar.appearance().barTintColor = UIColor(red: 151/255, green: 90/255, blue: 149/255, alpha: 1)
-//        window?.backgroundColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
+
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().tintColor = UIColor.white
-//        window?.backgroundColor = .white
+
         application.statusBarStyle = .lightContent
         window?.makeKeyAndVisible()
         return true
@@ -56,3 +56,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//        UINavigationBar.appearance().barTintColor = UIColor(red: 151/255, green: 90/255, blue: 149/255, alpha: 1)
