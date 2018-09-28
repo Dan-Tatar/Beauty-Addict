@@ -43,13 +43,13 @@ class MainCathegories {
         let maybelline = Product(name: "Maybelline Mascara Lash Sensational",
                                  imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
                                  description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
-                                 rating: 8.8,
+                                 rating: 8.8, review: "",
                                  url: "htts://amzn.to/2NS27Hj")
         products.append(maybelline)
         let xxx = Product(name: " Mascara Lash Sensational",
                           imageProduct: #imageLiteral(resourceName: "mascara"),
                           description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
-                          rating: 8.8,
+                          rating: 8.8, review: "",
                           url: "https://amzn.to/2NS27Hj")
         products.append(xxx)
         return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: products)
@@ -60,7 +60,7 @@ class MainCathegories {
         let dior = Product(name: "LipstickDior",
                            imageProduct: #imageLiteral(resourceName: "lipstickDior"),
                            description: "Lipstick designed for all lips",
-                           rating: 9.8,
+                           rating: 9.8, review: "",
                            url: "https://amzn.to/2NS27Hj")
         products.append(dior)
         return MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"), productList: products)
@@ -72,7 +72,7 @@ class MainCathegories {
         var macFoundation = Product(name: "Mac Foundation",
                                     imageProduct: #imageLiteral(resourceName: "macFoundation"),
                                     description: "Foundation without paraben",
-                                    rating: 7.8,
+                                    rating: 7.8, review: "",
                                     url: "https://amzn.to/2NS27Hj")
         products.append(macFoundation)
         return MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"), productList: products)
@@ -83,7 +83,7 @@ class MainCathegories {
         var maybelline = Product(name: "Makeup",
                                  imageProduct: #imageLiteral(resourceName: "makeUpChanel-1"),
                                  description: "High quality makeup",
-                                 rating: 4.8,
+                                 rating: 4.8, review: "",
                                  url: "https://amzn.to/2NS27Hj")
         products.append(maybelline)
         return MainCathegories(category: "Makeup", image: #imageLiteral(resourceName: "makeUp"), productList: products)

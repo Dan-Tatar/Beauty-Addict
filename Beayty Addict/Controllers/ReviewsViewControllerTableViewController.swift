@@ -10,7 +10,14 @@ import UIKit
 
 class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var cellID = "CellID"
+    static var allReviews: [String] = ["This product is really good"]
+    
+     func createReview(newReview: String) {
+        ReviewsViewController.allReviews.append(newReview)
+    }
+       var cellID = "CellID"
+    
+        let tableView: UITableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,21 +25,21 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         layoutSubviews()
         
         
-        let tableView: UITableView = UITableView()
+    
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-100)
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(ReviewCell.self, forCellReuseIdentifier: cellID)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ReviewCell
+        cell?.review.text = ReviewsViewController.allReviews[indexPath.row]
+        return cell!
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return ReviewsViewController.allReviews.count
     }
     var addReview : UIButton = {
         var button = UIButton()
@@ -45,10 +52,17 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }()
     
     @objc func review() {
-        let reviewViewController = AllReviewViewController()
+        let popup = AddReviewViewController()
         
-        reviewViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        self.present(reviewViewController, animated: true)
+        popup.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        popup.doneSaving =
+            { [weak self] in
+            
+            self?.tableView.reloadData()
+//            print(self?.allReviews)
+            
+        }
+       self.present(popup, animated: true)
     }
     
     func layoutSubviews() {

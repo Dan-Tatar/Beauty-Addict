@@ -8,8 +8,12 @@
 
 import UIKit
 
-class AllReviewViewController: UIViewController {
+class AddReviewViewController: UIViewController {
 
+   
+    var doneSaving: (() -> ())?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       view.backgroundColor = UIColor(white: 0, alpha: 0.4)
@@ -62,13 +66,22 @@ class AllReviewViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.blue, for: .normal)
         button.backgroundColor = UIColor.white
-        button.addTarget(self, action:  #selector(cancelPressed), for: .touchUpInside)
+        button.addTarget(self, action:  #selector(savePressed), for: .touchUpInside)
         button.setTitle("Save", for: .normal)
         return button
     }()
     
     @objc func savePressed() {
-        dismiss(animated: true, completion: nil)
+
+        let item = ReviewsViewController()
+        item.createReview(newReview: review.text!)
+        print(review.text!)
+  
+        if let doneSaving = doneSaving {
+            doneSaving()
+            print(doneSaving)
+        }
+        dismiss(animated: true)
     }
     
     func layoutSubviews() {
