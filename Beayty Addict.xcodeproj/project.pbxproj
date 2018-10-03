@@ -41,7 +41,6 @@
 		107E8C9821580AD100BDFE2C /* ReviewsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		107E8C9A215ACBF200BDFE2C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		107E8C9C215AD43A00BDFE2C /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
-		1080DB78213C4F8C00364680 /* MyPlayground0909.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground0909.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		10FC728020C8693700D6244A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		10FC728220D3043B00D6244A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		10FC728420D3ADB800D6244A /* DetailProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductCell.swift; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 				10FC728220D3043B00D6244A /* DetailViewController.swift */,
 				107E8C9821580AD100BDFE2C /* ReviewsViewControllerTableViewController.swift */,
 				105ED62120BC4E010058C68D /* AddReviewViewController.swift */,
-				107E8C9A215ACBF200BDFE2C /* CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -74,9 +72,10 @@
 		105ED61120BC4E010058C68D = {
 			isa = PBXGroup;
 			children = (
-				1080DB78213C4F8C00364680 /* MyPlayground0909.playground */,
 				105ED61C20BC4E010058C68D /* Beayty Addict */,
 				105ED61B20BC4E010058C68D /* Products */,
+				107E8C962158059C00BDFE2C /* Reviews */,
+				107E8C9A215ACBF200BDFE2C /* CollectionViewController.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,7 +116,6 @@
 				105ED63620BDBDC50058C68D /* CategoriesCell.swift */,
 				10FC728020C8693700D6244A /* ProductCell.swift */,
 				10FC728420D3ADB800D6244A /* DetailProductCell.swift */,
-				107E8C962158059C00BDFE2C /* Reviews */,
 				107E8C9C215AD43A00BDFE2C /* ReviewCell.swift */,
 			);
 			path = Views;

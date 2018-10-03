@@ -50,10 +50,12 @@ class AddReviewViewController: UIViewController {
     let cancelButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(UIColor.blue, for: .normal)
-        button.backgroundColor = UIColor.white
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
         button.addTarget(self, action:  #selector(cancelPressed), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.setTitle("Cancel", for: .normal)
+        button.layer.cornerRadius = 12
         return button
     }()
     
@@ -64,10 +66,13 @@ class AddReviewViewController: UIViewController {
     let saveButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(UIColor.blue, for: .normal)
-        button.backgroundColor = UIColor.white
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.cornerRadius = 8
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.backgroundColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
         button.addTarget(self, action:  #selector(savePressed), for: .touchUpInside)
         button.setTitle("Save", for: .normal)
+        button.layer.cornerRadius = 12
         return button
     }()
     
@@ -107,13 +112,13 @@ class AddReviewViewController: UIViewController {
         // cancelButton constraints
         cancelButton.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 8).isActive = true
         cancelButton.bottomAnchor.constraint(equalTo: reviewUIView.bottomAnchor, constant: -8).isActive = true
-        cancelButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        cancelButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         cancelButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
         // cancelButton constraints
-        saveButton.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: 8).isActive = true
+        saveButton.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -8).isActive = true
         saveButton.bottomAnchor.constraint(equalTo: reviewUIView.bottomAnchor, constant: -8).isActive = true
-        saveButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        saveButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         saveButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
         // review contraints

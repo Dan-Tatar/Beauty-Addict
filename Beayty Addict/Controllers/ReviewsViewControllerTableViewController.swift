@@ -24,8 +24,6 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         view.backgroundColor = UIColor.white
         layoutSubviews()
         
-        
-    
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-100)
         tableView.dataSource = self
         tableView.delegate = self
@@ -59,7 +57,6 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             { [weak self] in
             
             self?.tableView.reloadData()
-//            print(self?.allReviews)
             
         }
        self.present(popup, animated: true)
