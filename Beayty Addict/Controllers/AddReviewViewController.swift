@@ -45,6 +45,7 @@ class AddReviewViewController: UIViewController {
         rev.translatesAutoresizingMaskIntoConstraints = false
         rev.placeholder = "Type review"
         rev.backgroundColor = UIColor.white
+
         return rev
     }()
     let cancelButton: UIButton = {
@@ -85,10 +86,11 @@ class AddReviewViewController: UIViewController {
         imageView.image = #imageLiteral(resourceName: "icons8-error-26")
         reviewTextField.rightView = imageView
         reviewTextField.rightViewMode = .always
-        
+
         reviewTextField.layer.borderColor = UIColor.red.cgColor
         reviewTextField.layer.borderWidth = 2
         reviewTextField.placeholder = "No text added"
+        
         return
         }
         let item = ReviewsViewController()

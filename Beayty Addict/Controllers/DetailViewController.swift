@@ -152,6 +152,22 @@ class DetailViewController: UIViewController {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 //     init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 //        super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -10,7 +10,7 @@ import UIKit
 
 class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    static var allReviews: [String] = ["This product is really good"]
+    static var allReviews: [String] = ["This product is really good", "I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky.", "This mascara is actually smaller than I thought it would be when it was received."]
     
      func createReview(newReview: String) {
         ReviewsViewController.allReviews.append(newReview)
@@ -21,9 +21,9 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
         layoutSubviews()
-        
+        tableView.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-100)
         tableView.dataSource = self
         tableView.delegate = self
@@ -34,6 +34,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ReviewCell
         cell?.review.text = ReviewsViewController.allReviews[indexPath.row]
+        cell?.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
         return cell!
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
