@@ -40,7 +40,7 @@ class AddReviewViewController: UIViewController {
         return title
     }()
 
-    let review: UITextField = {
+    let reviewTextField: UITextField = {
         let rev = UITextField()
         rev.translatesAutoresizingMaskIntoConstraints = false
         rev.placeholder = "Type review"
@@ -78,9 +78,22 @@ class AddReviewViewController: UIViewController {
     
     @objc func savePressed() {
 
+        
+       guard  reviewTextField.text != "" else {
+
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.image = #imageLiteral(resourceName: "icons8-error-26")
+        reviewTextField.rightView = imageView
+        reviewTextField.rightViewMode = .always
+        
+        reviewTextField.layer.borderColor = UIColor.red.cgColor
+        reviewTextField.layer.borderWidth = 2
+        reviewTextField.placeholder = "No text added"
+        return
+        }
         let item = ReviewsViewController()
-        item.createReview(newReview: review.text!)
-        print(review.text!)
+        item.createReview(newReview: reviewTextField.text!)
+        print(reviewTextField.text!)
   
         if let doneSaving = doneSaving {
             doneSaving()
@@ -94,7 +107,7 @@ class AddReviewViewController: UIViewController {
         view.addSubview(reviewUIView)
         reviewUIView.addSubview(cancelButton)
         reviewUIView.addSubview(titleLabel)
-        reviewUIView.addSubview(review)
+        reviewUIView.addSubview(reviewTextField)
         reviewUIView.addSubview(saveButton)
         
         // titleLabel constraints
@@ -122,10 +135,10 @@ class AddReviewViewController: UIViewController {
         saveButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
         // review contraints
-        review.centerYAnchor.constraint(equalTo: reviewUIView.centerYAnchor).isActive = true
-        review.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 12).isActive = true
-        review.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -12).isActive = true
-        review.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        reviewTextField.centerYAnchor.constraint(equalTo: reviewUIView.centerYAnchor).isActive = true
+        reviewTextField.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 12).isActive = true
+        reviewTextField.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -12).isActive = true
+        reviewTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
 
