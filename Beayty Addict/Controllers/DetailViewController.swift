@@ -76,18 +76,13 @@ class DetailViewController: UIViewController {
         button.addTarget(self, action:  #selector(review), for: .touchUpInside)
         return button
     }()
+    
     @objc func review() {
         let reviewViewController = ReviewsViewController()
-
+        reviewViewController.productReviews = product
         navigationController?.pushViewController(reviewViewController, animated: true)
-        
     }
-    var tableView: UITableView = {
-        var tv = UITableView()
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        return tv
-    }()
-    
+
     func layoutSubviews() {
         
         view.addSubview(productImage1)
@@ -95,7 +90,6 @@ class DetailViewController: UIViewController {
         view.addSubview(productDescription1)
         view.addSubview(productRating1)
         view.addSubview(seeReviews)
-        view.addSubview(tableView)
         
         // productImage constraints
         productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
@@ -127,11 +121,6 @@ class DetailViewController: UIViewController {
         seeReviews.heightAnchor.constraint(equalToConstant: 30).isActive = true
         seeReviews.widthAnchor.constraint(equalToConstant: 110).isActive = true
         
-        // tableView constraints
-        tableView.topAnchor.constraint(equalTo: productRating1.bottomAnchor , constant: 8).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 15).isActive = true
     }
 }
 

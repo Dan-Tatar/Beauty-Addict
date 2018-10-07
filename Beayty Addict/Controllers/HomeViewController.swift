@@ -14,7 +14,6 @@ class HomeViewController: UITableViewController {
     
     let categoryID =  "categoryID"
     
-    //   var tableView: UITableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +23,11 @@ class HomeViewController: UITableViewController {
         
         categories = MainCathegories.categoriesArray()
         
-        //        collectionView?.register(CategoriesCell.self, forCellWithReuseIdentifier: categoryID)
         tableView.backgroundColor = .white
-        //        tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain )
+        
         tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)
-        //         self.view.addSubview(tableView)
         
     }
-    
     
 }
 
@@ -44,13 +40,12 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let category =  categories[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: categoryID, for: indexPath) as! CategoriesCell
-        //         cell.beautyCategoriesImageView.image = category.image
-        
         cell.setCategories(categories: category)
         cell.selectionStyle = .none
         
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
