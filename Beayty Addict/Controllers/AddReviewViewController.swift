@@ -12,6 +12,7 @@ class AddReviewViewController: UIViewController {
 
    
     var doneSaving: (() -> ())?
+    var reviewsVC : ReviewsViewController?
     
     
     override func viewDidLoad() {
@@ -93,8 +94,7 @@ class AddReviewViewController: UIViewController {
         return
         }
         
-        let item = ReviewsViewController()
-        item.createReview(newReview: reviewTextField.text!)
+        reviewsVC?.createReview(newReview: reviewTextField.text!)
         print(reviewTextField.text!)
   
         if let doneSaving = doneSaving {

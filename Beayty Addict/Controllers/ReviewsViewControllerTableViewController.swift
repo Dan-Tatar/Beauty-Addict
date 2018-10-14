@@ -10,14 +10,15 @@ import UIKit
 
 class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    static var allReviews: [String] = ["This product is really good", "I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky.", "This mascara is actually smaller than I thought it would be when it was received."]
     
     var productReviews: Product?
-    var rrr: [MainCathegories] = []
+    
     
     func createReview(newReview: String) {
-//         MainCathegories.categoriesArray().append(newReview)
-        ReviewsViewController.allReviews.append(newReview)
+        productReviews?.review.append(newReview)
+
+        print(productReviews?.review)
+ 
     }
        var cellID = "CellID"
     
@@ -39,7 +40,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ReviewCell
         cell?.review.text = productReviews?.review[indexPath.row]
-//        cell?.review.text = MainCathegories.categoriesArray()[indexPath.section].products[indexPath.row].review[indexPath.row]
+
         cell?.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
         return cell!
     }
@@ -59,7 +60,8 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc func review() {
         let popup = AddReviewViewController()
-        
+        // At presentation time of your AddReviewController, set property with correct value (the presenter)
+        popup.reviewsVC = self
         popup.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         popup.doneSaving =
             { [weak self] in

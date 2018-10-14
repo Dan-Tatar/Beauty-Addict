@@ -22,19 +22,8 @@ class MainCathegories {
     
     static func categoriesArray() -> [MainCathegories] {
         
-        
         return [self.mascaraArray(), self.lipstickArray(), self.foundationArray(), self.makeupArray()]
-        //        var mascara = MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"))
-        //        var lipstick = MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"))
-        //        var foundation = MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"))
-        //        var makeUp = MainCathegories(category: "MakeUp", image: #imageLiteral(resourceName: "makeUp") )
-        //
-        //        tempArray.append(mascara)
-        //        tempArray.append(lipstick)
-        //        tempArray.append(foundation)
-        //        tempArray.append(makeUp)
-        //        mascara.products = Product(name: <#T##String#>, imageProduct: <#T##UIImage#>, description: <#T##String#>, rating: <#T##Double#>)
-        //        return tempArray
+        
     }
     
     static func mascaraArray() -> MainCathegories {
@@ -47,10 +36,10 @@ class MainCathegories {
                                  url: "htts://amzn.to/2NS27Hj")
         products.append(maybelline)
         var mascara = Product(name: " Mascara Lash Sensational",
-                          imageProduct: #imageLiteral(resourceName: "mascara"),
-                          description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
-                          rating: 8.8, review: ["I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky."],
-                          url: "https://amzn.to/2NS27Hj")
+                              imageProduct: #imageLiteral(resourceName: "mascara"),
+                              description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
+                              rating: 8.8, review: ["I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky."],
+                              url: "https://amzn.to/2NS27Hj")
         products.append(mascara)
         return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: products)
     }
@@ -60,7 +49,7 @@ class MainCathegories {
         var dior = Product(name: "LipstickDior",
                            imageProduct: #imageLiteral(resourceName: "lipstickDior"),
                            description: "Lipstick designed for all lips",
-                           rating: 9.8, review: [""],
+                           rating: 9.8, review: ["Good product"],
                            url: "https://amzn.to/2NS27Hj")
         products.append(dior)
         return MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"), productList: products)
