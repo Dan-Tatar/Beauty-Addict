@@ -1,69 +1,64 @@
 //
-//  FirstViewController.swift
+//  HomeViewController.swift
 //  Beayty Addict
 //
-//  Created by Dan  Tatar on 28/05/2018.
+//  Created by Dan  Tatar on 14/10/2018.
 //  Copyright © 2018 Dany. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UITableViewController {
-    
-    var categories = [MainCathegories]()
-    
-    let categoryID =  "categoryID"
-    
-    
+class HomeViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        navigationItem.title = "Beauty Addict"
-        
-        categories = MainCathegories.categoriesArray()
-        
-        tableView.backgroundColor = .white
-        
-        tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)
+        navigationItem.title = "Beauty addict"
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "CaviarDreams", size: 20)!]
+        view.backgroundColor = UIColor.white
+
+       setupViews()
         
     }
     
+    var beautyImage: UIImageView = {
+        let ip = UIImageView()
+        ip.translatesAutoresizingMaskIntoConstraints = false
+        //   ip.contentMode = .scaleAspectFit
+        ip.image = UIImage(named: "beauty")
+        ip.layer.borderColor = UIColor.black.cgColor
+        ip.layer.masksToBounds = true
+        ip.layer.borderWidth = 0.2
+        ip.layer.cornerRadius = 10
+        //        ip.contentMode = .scaleToFill
+        return ip
+    }()
+
+
+    
+    var beautyLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Choose your perfect products"
+           label.font = UIFont (name: "GillSans-SemiBoldItalic", size: 30)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        
+        return label
+    }()
+    func setupViews() {
+        
+        view.addSubview(beautyImage)
+        view.addSubview(beautyLabel)
+
+        beautyImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 70).isActive = true
+        beautyImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
+        beautyImage.heightAnchor.constraint(equalToConstant: 500).isActive = true
+        beautyImage.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5).isActive = true
+
+        beautyLabel.topAnchor.constraint(equalTo: beautyImage.bottomAnchor, constant: 2).isActive = true
+        beautyLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        beautyLabel.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        beautyLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+
 }
-
-extension HomeViewController {
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let category =  categories[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: categoryID, for: indexPath) as! CategoriesCell
-        cell.setCategories(categories: category)
-        cell.selectionStyle = .none
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        let itemViewController = ItemViewController()
-        
-        if let selectedRow = tableView.indexPathForSelectedRow {
-            itemViewController.items =  [categories[selectedRow.row]]
-        }
-        
-        navigationController?.pushViewController( itemViewController, animated: true)
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    
 }
-
-
-

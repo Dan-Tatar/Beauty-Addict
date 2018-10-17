@@ -19,13 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
 //        let homeController = HomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        let homeController = HomeViewController()
-        window?.rootViewController = UINavigationController(rootViewController: homeController)
+        
+        window?.rootViewController = CustomTabBarController()
+    
+        
+//        let homeController = HomeViewController()
+//        
+//        window?.rootViewController = UINavigationController(rootViewController: homeController)
         UINavigationBar.appearance().barTintColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
 
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().tintColor = UIColor.white
-
+        UITabBar.appearance().tintColor = UIColor.black
         application.statusBarStyle = .lightContent
         window?.makeKeyAndVisible()
         return true

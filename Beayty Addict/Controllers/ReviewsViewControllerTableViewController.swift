@@ -29,7 +29,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         view.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
         layoutSubviews()
         tableView.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
-        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-100)
+        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-150)
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
@@ -76,7 +76,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         view.addSubview(addReview)
         
-        addReview.rightAnchor.constraint(equalTo: view.rightAnchor , constant: -40).isActive = true
+        addReview.rightAnchor.constraint(equalTo: view.rightAnchor , constant: -15).isActive = true
         addReview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
         addReview.heightAnchor.constraint(equalToConstant: 50).isActive = true
         addReview.widthAnchor.constraint(equalToConstant: 50).isActive = true
