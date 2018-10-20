@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -48,7 +49,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return productReviews?.review.count ?? 1
     }
     
-    var addReview : UIButton = {
+    var addReviewButton : UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 25
@@ -74,12 +75,12 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func layoutSubviews() {
         
-        view.addSubview(addReview)
+        view.addSubview(addReviewButton)
         
-        addReview.rightAnchor.constraint(equalTo: view.rightAnchor , constant: -15).isActive = true
-        addReview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
-        addReview.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        addReview.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        addReviewButton.rightAnchor.constraint(equalTo: view.rightAnchor , constant: -15).isActive = true
+        addReviewButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
+        addReviewButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        addReviewButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
     }
 }

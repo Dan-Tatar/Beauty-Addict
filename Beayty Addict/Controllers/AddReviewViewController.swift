@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddReviewViewController: UIViewController {
 
@@ -14,11 +15,14 @@ class AddReviewViewController: UIViewController {
     var doneSaving: (() -> ())?
     var reviewsVC : ReviewsViewController?
     
+    let ref = Database.database().reference(withPath: "Reviews")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
       view.backgroundColor = UIColor(white: 0, alpha: 0.4)
        layoutSubviews()
+    
     }
  
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +104,12 @@ class AddReviewViewController: UIViewController {
         if let doneSaving = doneSaving {
             doneSaving()
             print(doneSaving)
+            let reviewItem = self.ref.child("Review")
+            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!] as [String : Any]
+            reviewItem.childByAutoId().setValue(data)
+
         }
+        
         dismiss(animated: true)
     }
     

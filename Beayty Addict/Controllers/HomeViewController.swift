@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = UIColor.white
 
        setupViews()
-        
+     
     }
     
     var beautyImage: UIImageView = {

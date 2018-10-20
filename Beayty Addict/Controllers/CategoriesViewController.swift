@@ -26,7 +26,7 @@ class CategoriesViewController: UITableViewController {
         tableView.backgroundColor = .white
         
         tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)
-        
+           navigationController?.hidesBarsOnSwipe = true
     }
     
 }
