@@ -15,7 +15,7 @@ class AddReviewViewController: UIViewController {
     var doneSaving: (() -> ())?
     var reviewsVC : ReviewsViewController?
     
-    let ref = Database.database().reference(withPath: "Reviews")
+    let ref = Database.database().reference()
     
     
     override func viewDidLoad() {
@@ -52,6 +52,7 @@ class AddReviewViewController: UIViewController {
         rev.backgroundColor = UIColor.white
         return rev
     }()
+    
     let cancelButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -64,6 +65,7 @@ class AddReviewViewController: UIViewController {
         return button
     }()
     
+    //func called when cancelButton is pressed
     @objc func cancelPressed() {
         dismiss(animated: true, completion: nil)
     }
@@ -81,9 +83,9 @@ class AddReviewViewController: UIViewController {
         return button
     }()
     
+    // func called when saveButton is pressed
     @objc func savePressed() {
 
-        
        guard  reviewTextField.text != "" else {
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -104,9 +106,19 @@ class AddReviewViewController: UIViewController {
         if let doneSaving = doneSaving {
             doneSaving()
             print(doneSaving)
-            let reviewItem = self.ref.child("Review")
-            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!] as [String : Any]
-            reviewItem.childByAutoId().setValue(data)
+            
+            //Saving in the Firebase database
+       
+            let reviewItem = self.ref.child("Reviews")
+            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!]
+            reviewItem.childByAutoId().setValue(data) {
+               (error, ref) in
+                if error != nil {
+                    print(error)
+                } else {
+                    print("Message saved succesfully")
+                }
+            }
 
         }
         

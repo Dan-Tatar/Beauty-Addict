@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         ip.layer.masksToBounds = true
         ip.layer.borderWidth = 0.2
         ip.layer.cornerRadius = 10
-        //        ip.contentMode = .scaleToFill
+
         return ip
     }()
 

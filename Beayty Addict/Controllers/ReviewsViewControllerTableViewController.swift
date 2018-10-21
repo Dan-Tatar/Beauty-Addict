@@ -14,6 +14,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var productReviews: Product?
     
+    var reviews = [Reviews]()
     
     func createReview(newReview: String) {
         productReviews?.review.append(newReview)
@@ -35,18 +36,23 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         view.addSubview(tableView)
         tableView.register(ReviewCell.self, forCellReuseIdentifier: cellID)
+        
+        retrieveData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ReviewCell
-        cell?.review.text = productReviews?.review[indexPath.row]
+//        cell?.review.text = productReviews?.review[indexPath.row]
+        cell?.review.text = reviews[indexPath.row].review
 
+        
         cell?.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
         return cell!
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productReviews?.review.count ?? 1
+//        return productReviews?.review.count ?? 1
+        return reviews.count
     }
     
     var addReviewButton : UIButton = {
@@ -66,13 +72,35 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         popup.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         popup.doneSaving =
             { [weak self] in
-            
+
             self?.tableView.reloadData()
-            
+
         }
        self.present(popup, animated: true)
     }
     
+    // Retrieve reviews from the Firebsse database
+    func retrieveData() {
+        
+        let reviewDB = Database.database().reference().child("Reviews")
+        
+        reviewDB.observe(.childAdded, with: { (snapshot) in
+            let snapShotValue = snapshot.value as? Dictionary<String, String>
+            let product = snapShotValue?["Product"]!
+            let rev = snapShotValue?["review"]!
+            
+            print(product, rev)
+            
+            if product == self.productReviews?.name {
+            let newReview = Reviews(name: product!, review: rev!)
+            self.reviews.append(newReview)
+            self.tableView.reloadData()
+        
+            }
+        })
+    }
+    
+    // Setup autolayout
     func layoutSubviews() {
         
         view.addSubview(addReviewButton)

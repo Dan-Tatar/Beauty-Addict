@@ -30,7 +30,7 @@ class ReviewCell: UITableViewCell {
     
     var review: UILabel = {
         let rev = UILabel()
-        rev.font = UIFont.boldSystemFont(ofSize: 17)
+        rev.font = UIFont.systemFont(ofSize: 17)
         rev.backgroundColor = UIColor.white
 
         rev.translatesAutoresizingMaskIntoConstraints = false

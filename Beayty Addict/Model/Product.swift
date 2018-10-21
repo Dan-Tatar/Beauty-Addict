@@ -26,3 +26,8 @@ class Product {
         self.url = url
     }
 }
+
+struct Reviews  {
+    var name: String
+    var review: String
+}
