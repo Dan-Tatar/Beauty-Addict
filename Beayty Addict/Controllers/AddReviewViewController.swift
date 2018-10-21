@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Cosmos
+import TinyConstraints
 
 class AddReviewViewController: UIViewController {
 
@@ -23,6 +25,9 @@ class AddReviewViewController: UIViewController {
       view.backgroundColor = UIColor(white: 0, alpha: 0.4)
        layoutSubviews()
     
+        cosmosView.didTouchCosmos = { rating in
+            print("\(rating)")
+        }
     }
  
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +50,29 @@ class AddReviewViewController: UIViewController {
         return title
     }()
 
+    let nameTextField: UITextField = {
+        let rev = UITextField()
+        rev.translatesAutoresizingMaskIntoConstraints = false
+        rev.placeholder = "Type name"
+        rev.backgroundColor = UIColor.white
+        return rev
+    }()
+    
+//    let ratingTextField: UITextField = {
+//        let rev = UITextField()
+//        rev.translatesAutoresizingMaskIntoConstraints = false
+//        rev.placeholder = "Type rating 1 - 5"
+//        rev.backgroundColor = UIColor.white
+//        return rev
+//    }()
+    
+    lazy var cosmosView: CosmosView = {
+        var view = CosmosView()
+          view.translatesAutoresizingMaskIntoConstraints = false
+        view.settings.fillMode = .full
+        view.settings.starSize = 26
+        return view
+    }()
     let reviewTextField: UITextField = {
         let rev = UITextField()
         rev.translatesAutoresizingMaskIntoConstraints = false
@@ -110,7 +138,9 @@ class AddReviewViewController: UIViewController {
             //Saving in the Firebase database
        
             let reviewItem = self.ref.child("Reviews")
-            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!]
+//            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!]
+            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!,  "name": nameTextField.text, "Rating": cosmosView.rating ] as [String : Any]
+           
             reviewItem.childByAutoId().setValue(data) {
                (error, ref) in
                 if error != nil {
@@ -132,12 +162,15 @@ class AddReviewViewController: UIViewController {
         reviewUIView.addSubview(titleLabel)
         reviewUIView.addSubview(reviewTextField)
         reviewUIView.addSubview(saveButton)
+        reviewUIView.addSubview(nameTextField)
+        reviewUIView.addSubview(cosmosView)
         
         // titleLabel constraints
         titleLabel.topAnchor.constraint(equalTo: reviewUIView.topAnchor, constant: 8).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 8).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -8).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
         
         // reviewUIView constraints
         reviewUIView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -157,7 +190,20 @@ class AddReviewViewController: UIViewController {
         saveButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         saveButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
-        // review contraints
+        // nameTextField constraints
+        nameTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        nameTextField.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 12).isActive = true
+//        nameTextField.widthAnchor.constraint(equalToConstant: 170).isActive = true
+        nameTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        // ratingTextField constraints
+//        cosmosView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
+        cosmosView.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -12).isActive = true
+         cosmosView.leftAnchor.constraint(equalTo: nameTextField.rightAnchor, constant: 12).isActive = true
+//        cosmosView.widthAnchor.constraint(equalTo: reviewTextField.widthAnchor ).isActive = true
+        cosmosView.centerYAnchor.constraint(equalTo: nameTextField.centerYAnchor).isActive = true
+        
+        // reviewTextField contraints
         reviewTextField.centerYAnchor.constraint(equalTo: reviewUIView.centerYAnchor).isActive = true
         reviewTextField.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 12).isActive = true
         reviewTextField.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -12).isActive = true

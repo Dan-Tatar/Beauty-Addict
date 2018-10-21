@@ -88,6 +88,8 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             let snapShotValue = snapshot.value as? Dictionary<String, String>
             let product = snapShotValue?["Product"]!
             let rev = snapShotValue?["review"]!
+            let name = snapShotValue?["name"]!
+            let rating = snapShotValue?["rating"]!
             
             print(product, rev)
             
