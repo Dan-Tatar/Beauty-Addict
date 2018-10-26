@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Cosmos
+import TinyConstraints
 
 class ReviewCell: UITableViewCell {
     
@@ -38,11 +40,37 @@ class ReviewCell: UITableViewCell {
         return rev
     }()
     
+    var usernameLabel: UILabel = {
+        let rev = UILabel()
+        rev.font = UIFont.boldSystemFont(ofSize: 18)
+        rev.backgroundColor = UIColor.white
+        
+        rev.translatesAutoresizingMaskIntoConstraints = false
+        
+        return rev
+    }()
+    
+    lazy var cosmosViewLabel: CosmosView = {
+        var view = CosmosView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.settings.fillMode = .full
+        view.settings.starSize = 26
+        return view
+    }()
+    
+    func setReviews(item: Reviews) {
+        
+        usernameLabel.text = item.userName
+        review.text = item.review
+        cosmosViewLabel.rating = item.rating
+    }
     
     func setupViews() {
         
         addSubview(bubbleView)
         bubbleView.addSubview(review)
+        bubbleView.addSubview(usernameLabel)
+        bubbleView.addSubview(cosmosViewLabel)
         review.numberOfLines = 0
         
         bubbleView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
@@ -50,12 +78,20 @@ class ReviewCell: UITableViewCell {
         bubbleView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
         bubbleView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
         
-        review.topAnchor.constraint(equalTo: bubbleView.topAnchor, constant: 16).isActive = true
+        review.topAnchor.constraint(equalTo: cosmosViewLabel.topAnchor, constant: 30).isActive = true
         review.leftAnchor.constraint(equalTo: bubbleView.leftAnchor, constant: 16).isActive = true
         review.rightAnchor.constraint(equalTo: bubbleView.rightAnchor, constant: -16).isActive = true
         review.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -16).isActive = true
         
+        usernameLabel.topAnchor.constraint(equalTo: bubbleView.topAnchor, constant: 18).isActive = true
+        usernameLabel.leftAnchor.constraint(equalTo: cosmosViewLabel.rightAnchor, constant: 30).isActive = true
+        usernameLabel.rightAnchor.constraint(equalTo: bubbleView.rightAnchor, constant: -16).isActive = true
+//        usernameLabel.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -16).isActive = true
         
+        cosmosViewLabel.topAnchor.constraint(equalTo: bubbleView.topAnchor, constant: 16).isActive = true
+        cosmosViewLabel.leftAnchor.constraint(equalTo: bubbleView.leftAnchor, constant: 16).isActive = true
+//        cosmosViewLabel.rightAnchor.constraint(equalTo: bubbleView.rightAnchor, constant: -16).isActive = true
+        //        usernameLabel.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -16).isActive = true
     }
 }
 

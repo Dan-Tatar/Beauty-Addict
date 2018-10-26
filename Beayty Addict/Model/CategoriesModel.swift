@@ -35,7 +35,7 @@ class MainCathegories {
                                  rating: 8.8, review: ["This product is really good", "I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky.", "This mascara is actually smaller than I thought it would be when it was received."],
                                  url: "htts://amzn.to/2NS27Hj")
         products.append(maybelline)
-        var mascara = Product(name: " Mascara Lash Sensational",
+        var mascara = Product(name: "Mascara Lash Sensational",
                               imageProduct: #imageLiteral(resourceName: "mascara"),
                               description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
                               rating: 8.8, review: ["I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky."],

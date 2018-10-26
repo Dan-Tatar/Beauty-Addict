@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.black
         application.statusBarStyle = .lightContent
         window?.makeKeyAndVisible()
+        
         return true
     }
 

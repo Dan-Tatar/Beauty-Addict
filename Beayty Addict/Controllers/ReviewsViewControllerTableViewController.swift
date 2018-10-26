@@ -43,8 +43,9 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ReviewCell
-//        cell?.review.text = productReviews?.review[indexPath.row]
-        cell?.review.text = reviews[indexPath.row].review
+        cell?.setReviews(item: reviews[indexPath.row])
+        
+//        cell?.review.text = reviews[indexPath.row].review
 
         
         cell?.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
@@ -85,16 +86,16 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let reviewDB = Database.database().reference().child("Reviews")
         
         reviewDB.observe(.childAdded, with: { (snapshot) in
-            let snapShotValue = snapshot.value as? Dictionary<String, String>
-            let product = snapShotValue?["Product"]!
-            let rev = snapShotValue?["review"]!
-            let name = snapShotValue?["name"]!
-            let rating = snapShotValue?["rating"]!
+            let snapShotValue = snapshot.value as? Dictionary<String, Any>
+            let product = snapShotValue?["Product"] as? String
+            let userName = snapShotValue?["userName"] as? String
+            let rating = snapShotValue?["rating"] as? Double
+            let rev = snapShotValue?["review"] as? String
             
             print(product, rev)
             
-            if product == self.productReviews?.name {
-            let newReview = Reviews(name: product!, review: rev!)
+            if product as! String? == self.productReviews?.name {
+                let newReview = Reviews(name: product!, userName: userName! , rating: rating!, review: rev!)
             self.reviews.append(newReview)
             self.tableView.reloadData()
         

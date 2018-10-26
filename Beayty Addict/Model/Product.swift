@@ -29,5 +29,8 @@ class Product {
 
 struct Reviews  {
     var name: String
+    var userName: String
+    var rating: Double
     var review: String
+
 }
