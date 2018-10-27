@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         layoutSubviews()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,12 +66,12 @@ class DetailViewController: UIViewController {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
-        button.layer.borderWidth = 2
-        button.backgroundColor = UIColor.black
-        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 1
+        button.backgroundColor = UIColor.gray
         button.setTitle( "See Reviews", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.titleLabel?.textColor = UIColor.blue
+        button.setTitleColor(UIColor.white, for: .normal)
+        
         button.addTarget(self, action:  #selector(review), for: .touchUpInside)
         return button
     }()
@@ -118,8 +117,8 @@ class DetailViewController: UIViewController {
         // seeReview constraints
         seeReviews.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
         seeReviews.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-        seeReviews.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        seeReviews.widthAnchor.constraint(equalToConstant: 110).isActive = true
+        seeReviews.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        seeReviews.widthAnchor.constraint(equalToConstant: 140).isActive = true
         
     }
 }
