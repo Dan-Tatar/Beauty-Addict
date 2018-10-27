@@ -32,5 +32,6 @@ struct Reviews  {
     var userName: String
     var rating: Double
     var review: String
+    var date: String
 
 }

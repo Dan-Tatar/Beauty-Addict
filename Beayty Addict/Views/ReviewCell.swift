@@ -44,7 +44,6 @@ class ReviewCell: UITableViewCell {
         let rev = UILabel()
         rev.font = UIFont.boldSystemFont(ofSize: 18)
         rev.backgroundColor = UIColor.white
-        
         rev.translatesAutoresizingMaskIntoConstraints = false
         
         return rev
@@ -84,14 +83,15 @@ class ReviewCell: UITableViewCell {
         review.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -16).isActive = true
         
         usernameLabel.topAnchor.constraint(equalTo: bubbleView.topAnchor, constant: 18).isActive = true
-        usernameLabel.leftAnchor.constraint(equalTo: cosmosViewLabel.rightAnchor, constant: 30).isActive = true
+
         usernameLabel.rightAnchor.constraint(equalTo: bubbleView.rightAnchor, constant: -16).isActive = true
+        usernameLabel.leftAnchor.constraint(equalTo: cosmosViewLabel.rightAnchor, constant: 30).isActive = true
 //        usernameLabel.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -16).isActive = true
         
         cosmosViewLabel.topAnchor.constraint(equalTo: bubbleView.topAnchor, constant: 16).isActive = true
         cosmosViewLabel.leftAnchor.constraint(equalTo: bubbleView.leftAnchor, constant: 16).isActive = true
 //        cosmosViewLabel.rightAnchor.constraint(equalTo: bubbleView.rightAnchor, constant: -16).isActive = true
-        //        usernameLabel.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -16).isActive = true
+//                usernameLabel.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -16).isActive = true
     }
 }
 

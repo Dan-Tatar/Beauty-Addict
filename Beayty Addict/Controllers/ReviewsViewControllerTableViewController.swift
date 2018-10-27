@@ -91,11 +91,13 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             let userName = snapShotValue?["userName"] as? String
             let rating = snapShotValue?["rating"] as? Double
             let rev = snapShotValue?["review"] as? String
+            let date = snapShotValue?["date"] as? String
+          
             
             print(product, rev)
             
             if product as! String? == self.productReviews?.name {
-                let newReview = Reviews(name: product!, userName: userName! , rating: rating!, review: rev!)
+                let newReview = Reviews(name: product!, userName: userName! , rating: rating!, review: rev!, date: date!)
             self.reviews.append(newReview)
             self.tableView.reloadData()
         

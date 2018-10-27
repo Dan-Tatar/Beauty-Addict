@@ -139,7 +139,12 @@ class AddReviewViewController: UIViewController {
        
             let reviewItem = self.ref.child("Reviews")
 //            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!]
-            let data = ["Product": reviewsVC?.productReviews?.name, "userName": nameTextField.text, "rating": cosmosView.rating,  "review": reviewTextField.text ] as [String : Any]
+//            let date = Date()
+//            let stringDate =  String(date)
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let date = formatter.string(from: Date())
+            let data = ["Product": reviewsVC?.productReviews?.name, "userName": nameTextField.text, "rating": cosmosView.rating,  "review": reviewTextField.text, "date": date ] as [String : Any]
            
             reviewItem.childByAutoId().setValue(data) {
                (error, ref) in
