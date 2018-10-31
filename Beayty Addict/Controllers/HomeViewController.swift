@@ -12,12 +12,24 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Beauty addict"
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "CaviarDreams", size: 20)!]
+
         view.backgroundColor = UIColor.white
 
+       createNavigationTitle()
        setupViews()
-     
+
+    }
+    
+    func createNavigationTitle() {
+        
+        let titlelabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        titlelabel.text = "Beauty addict"
+//        titlelabel.font = UIFont (name: "GillSans-SemiBoldItalic", size: 25)
+        titlelabel.textAlignment = .center
+        titlelabel.font = UIFont.boldSystemFont(ofSize: 20)
+        titlelabel.textColor = UIColor.white
+        navigationItem.titleView = titlelabel
+        
     }
     
     var beautyImage: UIImageView = {
@@ -32,7 +44,6 @@ class HomeViewController: UIViewController {
 
         return ip
     }()
-
 
     
     var beautyLabel: UILabel = {

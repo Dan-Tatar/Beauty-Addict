@@ -65,8 +65,9 @@ class DetailViewController: UIViewController {
     var seeReviews : UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = 14
         button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
         button.backgroundColor = UIColor.gray
         button.setTitle( "See Reviews", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -91,9 +92,9 @@ class DetailViewController: UIViewController {
         view.addSubview(seeReviews)
         
         // productImage constraints
-        productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
-        productImage1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor , constant: 8).isActive = true
-        productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
+        productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        productImage1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor , constant: 0).isActive = true
+        productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         productImage1.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
         // ProductName constraints

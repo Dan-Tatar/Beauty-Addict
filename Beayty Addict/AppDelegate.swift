@@ -19,18 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         
-//        let homeController = HomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        
         window?.rootViewController = CustomTabBarController()
     
         FirebaseApp.configure()
         
-        
-//        let homeController = HomeViewController()
-//        
-//        window?.rootViewController = UINavigationController(rootViewController: homeController)
         UINavigationBar.appearance().barTintColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
-
+//        UINavigationBar.titleVi
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().tintColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.black

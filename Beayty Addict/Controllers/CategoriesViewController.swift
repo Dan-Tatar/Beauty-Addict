@@ -19,14 +19,14 @@ class CategoriesViewController: UITableViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        navigationItem.title = "Beauty Addict"
+//        navigationItem.title = "Beauty Addict"
 
         categories = MainCathegories.categoriesArray()
         
         tableView.backgroundColor = .white
         
         tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)
-           navigationController?.hidesBarsOnSwipe = true
+
     }
     
 }
