@@ -29,12 +29,14 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
+
         layoutSubviews()
         tableView.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
-        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-150)
+        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 50)
         tableView.dataSource = self
         tableView.delegate = self
-        view.addSubview(tableView)
+
+     
         tableView.register(ReviewCell.self, forCellReuseIdentifier: cellID)
         
         retrieveData()
@@ -55,6 +57,14 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
 //        return productReviews?.review.count ?? 1
         return reviews.count
     }
+    
+    let floatingView: UIView = {
+        let fV = UIView()
+        fV.translatesAutoresizingMaskIntoConstraints = false
+        fV.backgroundColor = UIColor.black
+        fV.layer.cornerRadius = 25
+        return fV
+    }()
     
     var addReviewButton : UIButton = {
         var button = UIButton()
@@ -97,7 +107,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(product, rev)
             
             if product as! String? == self.productReviews?.name {
-                let newReview = Reviews(name: product!, userName: userName! , rating: rating!, review: rev!, date: date!)
+            let newReview = Reviews(name: product!, userName: userName! , rating: rating!, review: rev!, date: date!)
             self.reviews.append(newReview)
             self.tableView.reloadData()
         
@@ -107,13 +117,16 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // Setup autolayout
     func layoutSubviews() {
-        
+ 
+        view.addSubview(tableView)
         view.addSubview(addReviewButton)
         
+        //addReviews constraints
         addReviewButton.rightAnchor.constraint(equalTo: view.rightAnchor , constant: -15).isActive = true
         addReviewButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
         addReviewButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         addReviewButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
+
     }
 }
