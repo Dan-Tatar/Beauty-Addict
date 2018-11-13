@@ -68,7 +68,7 @@ class HomeViewController: UIViewController {
 
         beautyLabel.topAnchor.constraint(equalTo: beautyImage.bottomAnchor, constant: 2).isActive = true
         beautyLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        beautyLabel.heightAnchor.constraint(equalToConstant: 200).isActive = true
+         beautyLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 2).isActive = true
         beautyLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
 
 }
