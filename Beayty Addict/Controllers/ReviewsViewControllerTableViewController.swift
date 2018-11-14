@@ -46,6 +46,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ReviewCell
         cell?.setReviews(item: reviews[indexPath.row])
+        cell?.selectionStyle = .none
         
 //        cell?.review.text = reviews[indexPath.row].review
 
