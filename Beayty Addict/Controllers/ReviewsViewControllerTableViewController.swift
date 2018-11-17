@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import NotificationCenter
 
 class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -36,11 +37,14 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
 
-     
         tableView.register(ReviewCell.self, forCellReuseIdentifier: cellID)
         
         retrieveData()
+        
+     
     }
+    
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 

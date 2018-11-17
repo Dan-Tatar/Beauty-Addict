@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import Cosmos
 import TinyConstraints
+//import NotificationCenter
 
 class AddReviewViewController: UIViewController {
 
@@ -24,15 +25,27 @@ class AddReviewViewController: UIViewController {
         super.viewDidLoad()
       view.backgroundColor = UIColor(white: 0, alpha: 0.4)
        layoutSubviews()
-    
+       
         cosmosView.didTouchCosmos = { rating in
             print("\(rating)")
+            
+         
         }
     }
- 
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        //add observer for keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+
     }
+    
+    // move the origin of y higher for UIView to be visible when keyboard appears
+    @objc func keyboardWillShow(notification: NSNotification) {
+                    self.view.frame.origin.y -= 55
+    }
+    
     
     let reviewUIView: UIView = {
        let RU = UIView()
@@ -57,14 +70,6 @@ class AddReviewViewController: UIViewController {
         rev.backgroundColor = UIColor.white
         return rev
     }()
-    
-//    let ratingTextField: UITextField = {
-//        let rev = UITextField()
-//        rev.translatesAutoresizingMaskIntoConstraints = false
-//        rev.placeholder = "Type rating 1 - 5"
-//        rev.backgroundColor = UIColor.white
-//        return rev
-//    }()
     
     lazy var cosmosView: CosmosView = {
         var view = CosmosView()
@@ -96,6 +101,7 @@ class AddReviewViewController: UIViewController {
     //func called when cancelButton is pressed
     @objc func cancelPressed() {
         dismiss(animated: true, completion: nil)
+        
     }
     
     let saveButton: UIButton = {
@@ -138,9 +144,7 @@ class AddReviewViewController: UIViewController {
             //Saving in the Firebase database
        
             let reviewItem = self.ref.child("Reviews")
-//            let data = ["Product": reviewsVC?.productReviews?.name , "review": reviewTextField.text!]
-//            let date = Date()
-//            let stringDate =  String(date)
+
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             let date = formatter.string(from: Date())
