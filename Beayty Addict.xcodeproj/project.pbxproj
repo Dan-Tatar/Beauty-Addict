@@ -111,6 +111,7 @@
 				10FC727F20C8690200D6244A /* Views */,
 				105ED62620BC4E010058C68D /* Assets.xcassets */,
 				105ED62820BC4E010058C68D /* LaunchScreen.storyboard */,
+				10FC728420D3ADB800D6244A /* DetailProductCell.swift */,
 				105ED62B20BC4E010058C68D /* Info.plist */,
 				109BAEF5217A44DE00FBCD11 /* GoogleService-Info.plist */,
 			);
@@ -131,7 +132,6 @@
 			children = (
 				105ED63620BDBDC50058C68D /* CategoriesCell.swift */,
 				10FC728020C8693700D6244A /* ProductCell.swift */,
-				10FC728420D3ADB800D6244A /* DetailProductCell.swift */,
 				107E8C9C215AD43A00BDFE2C /* ReviewCell.swift */,
 			);
 			path = Views;

@@ -27,12 +27,11 @@ class ProductCell: UITableViewCell {
     var imageProduct: UIImageView = {
         let ip = UIImageView()
         ip.translatesAutoresizingMaskIntoConstraints = false
-     //   ip.contentMode = .scaleAspectFit
         ip.layer.borderColor = UIColor.black.cgColor
         ip.layer.masksToBounds = true
         ip.layer.borderWidth = 0.2
         ip.layer.cornerRadius = 10
-//        ip.contentMode = .scaleToFill
+
         return ip
     }()
     var nameProduct: UITextView = {

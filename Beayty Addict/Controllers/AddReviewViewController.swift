@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import Cosmos
 import TinyConstraints
-//import NotificationCenter
+
 
 class AddReviewViewController: UIViewController {
 
@@ -202,7 +202,6 @@ class AddReviewViewController: UIViewController {
         // nameTextField constraints
         nameTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         nameTextField.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 12).isActive = true
-//        nameTextField.widthAnchor.constraint(equalToConstant: 170).isActive = true
         nameTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         // ratingTextField constraints

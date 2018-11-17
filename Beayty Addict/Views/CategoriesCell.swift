@@ -15,7 +15,6 @@ class CategoriesCell: UITableViewCell {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.clipsToBounds = true
-        //        iv.layer.cornerRadius = 10
         iv.contentMode = .scaleAspectFill
         return iv
     }()

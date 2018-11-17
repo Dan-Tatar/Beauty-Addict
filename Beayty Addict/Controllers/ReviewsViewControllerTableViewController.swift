@@ -40,11 +40,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.register(ReviewCell.self, forCellReuseIdentifier: cellID)
         
         retrieveData()
-        
-     
     }
-    
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 

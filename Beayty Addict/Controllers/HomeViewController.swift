@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
         
         let titlelabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         titlelabel.text = "Beauty addict"
-//        titlelabel.font = UIFont (name: "GillSans-SemiBoldItalic", size: 25)
         titlelabel.textAlignment = .center
         titlelabel.font = UIFont.boldSystemFont(ofSize: 20)
         titlelabel.textColor = UIColor.white
@@ -35,7 +34,6 @@ class HomeViewController: UIViewController {
     var beautyImage: UIImageView = {
         let ip = UIImageView()
         ip.translatesAutoresizingMaskIntoConstraints = false
-        //   ip.contentMode = .scaleAspectFit
         ip.image = UIImage(named: "beauty")
         ip.layer.borderColor = UIColor.black.cgColor
         ip.layer.masksToBounds = true
@@ -61,15 +59,17 @@ class HomeViewController: UIViewController {
         view.addSubview(beautyImage)
         view.addSubview(beautyLabel)
 
+        // constraints beautyImage
         beautyImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 70).isActive = true
         beautyImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
-        beautyImage.heightAnchor.constraint(equalToConstant: 500).isActive = true
         beautyImage.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5).isActive = true
-
-        beautyLabel.topAnchor.constraint(equalTo: beautyImage.bottomAnchor, constant: 2).isActive = true
+        beautyImage.bottomAnchor.constraint(equalTo: beautyLabel.topAnchor, constant: 2).isActive = true
+        
+        // constraints beautyLabel
+        beautyLabel.heightAnchor.constraint(equalToConstant: 120).isActive = true
         beautyLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-         beautyLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 2).isActive = true
+        beautyLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 2).isActive = true
         beautyLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
 
-}
+   }
 }

@@ -19,7 +19,6 @@ class CategoriesViewController: UITableViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-//        navigationItem.title = "Beauty Addict"
 
         categories = MainCathegories.categoriesArray()
         
