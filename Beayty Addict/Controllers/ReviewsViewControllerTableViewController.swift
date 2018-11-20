@@ -31,7 +31,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
 
-        layoutSubviews()
+        setupViews()
         tableView.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 241/255, alpha: 1)
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 50)
         tableView.dataSource = self
@@ -117,7 +117,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // Setup autolayout
-    func layoutSubviews() {
+    func setupViews() {
  
         view.addSubview(tableView)
         view.addSubview(addReviewButton)

@@ -24,7 +24,7 @@ class AddReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       view.backgroundColor = UIColor(white: 0, alpha: 0.4)
-       layoutSubviews()
+       setupViews()
        
         cosmosView.didTouchCosmos = { rating in
             print("\(rating)")
@@ -164,7 +164,7 @@ class AddReviewViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    func layoutSubviews() {
+    func setupViews() {
     
         view.addSubview(reviewUIView)
         reviewUIView.addSubview(cancelButton)
