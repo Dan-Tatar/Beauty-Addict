@@ -64,11 +64,13 @@ class AddReviewViewController: UIViewController {
     }()
 
     let nameTextField: UITextField = {
-        let rev = UITextField()
-        rev.translatesAutoresizingMaskIntoConstraints = false
-        rev.placeholder = "Type name"
-        rev.backgroundColor = UIColor.white
-        return rev
+        let name = UITextField()
+        name.translatesAutoresizingMaskIntoConstraints = false
+        name.placeholder = " Type name"
+        name.backgroundColor = UIColor.white
+        name.layer.borderColor = UIColor.gray.cgColor
+        name.layer.borderWidth = 0.5
+        return name
     }()
     
     lazy var cosmosView: CosmosView = {
@@ -81,8 +83,10 @@ class AddReviewViewController: UIViewController {
     let reviewTextField: UITextField = {
         let rev = UITextField()
         rev.translatesAutoresizingMaskIntoConstraints = false
-        rev.placeholder = "Type review"
+        rev.placeholder = " Type review"
         rev.backgroundColor = UIColor.white
+        rev.layer.borderColor = UIColor.gray.cgColor
+        rev.layer.borderWidth = 0.5
         return rev
     }()
     
@@ -128,12 +132,13 @@ class AddReviewViewController: UIViewController {
 
         reviewTextField.layer.borderColor = UIColor.clear.cgColor
         reviewTextField.layer.borderWidth = 0
-        reviewTextField.placeholder = "Type review"
+        reviewTextField.placeholder = " Type review"
 
         nameTextField.layer.borderColor = UIColor.clear.cgColor
         nameTextField.layer.borderWidth = 0
-        nameTextField.placeholder = "Type review"
+        nameTextField.placeholder = " Type review"
 
+        
         guard  nameTextField.text != "" else {
             
             imageView.image = #imageLiteral(resourceName: "icons8-error-26")
@@ -142,7 +147,7 @@ class AddReviewViewController: UIViewController {
             
             nameTextField.layer.borderColor = UIColor.red.cgColor
             nameTextField.layer.borderWidth = 2
-            nameTextField.placeholder = "No text added"
+            nameTextField.placeholder = " No text added"
             
             return
         }
@@ -153,7 +158,7 @@ class AddReviewViewController: UIViewController {
             reviewTextField.rightViewMode = .always
             reviewTextField.layer.borderColor = UIColor.red.cgColor
             reviewTextField.layer.borderWidth = 2
-            reviewTextField.placeholder = "No text added"
+            reviewTextField.placeholder = " No text added"
 
         return
         }
