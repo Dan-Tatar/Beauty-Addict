@@ -12,7 +12,7 @@ import Cosmos
 import TinyConstraints
 
 
-class AddReviewViewController: UIViewController {
+class AddReviewViewController: UIViewController, UITextFieldDelegate {
 
    
     var doneSaving: (() -> ())?
@@ -29,8 +29,9 @@ class AddReviewViewController: UIViewController {
         cosmosView.didTouchCosmos = { rating in
             print("\(rating)")
             
-         
         }
+        nameTextField.delegate = self
+        reviewTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,11 +65,13 @@ class AddReviewViewController: UIViewController {
     }()
 
     let nameTextField: UITextField = {
-        let rev = UITextField()
-        rev.translatesAutoresizingMaskIntoConstraints = false
-        rev.placeholder = "Type name"
-        rev.backgroundColor = UIColor.white
-        return rev
+        let name = UITextField()
+        name.translatesAutoresizingMaskIntoConstraints = false
+        name.placeholder = " Type name"
+        name.backgroundColor = UIColor.white
+        name.layer.borderColor = UIColor.gray.cgColor
+        name.layer.borderWidth = 0.5
+        return name
     }()
     
     lazy var cosmosView: CosmosView = {
@@ -81,8 +84,10 @@ class AddReviewViewController: UIViewController {
     let reviewTextField: UITextField = {
         let rev = UITextField()
         rev.translatesAutoresizingMaskIntoConstraints = false
-        rev.placeholder = "Type review"
+        rev.placeholder = " Type review"
         rev.backgroundColor = UIColor.white
+        rev.layer.borderColor = UIColor.gray.cgColor
+        rev.layer.borderWidth = 0.5
         return rev
     }()
     
@@ -117,23 +122,65 @@ class AddReviewViewController: UIViewController {
         return button
     }()
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case nameTextField:
+                 nameTextField.layer.borderWidth = 1
+            nameTextField.layer.borderColor = UIColor(red: 27/255, green: 95/255, blue: 180/255, alpha: 1).cgColor
+                reviewTextField.layer.borderColor = UIColor.gray.cgColor
+                 reviewTextField.layer.borderWidth = 0.5
+        case reviewTextField:
+            reviewTextField.layer.borderWidth = 1
+            reviewTextField.layer.borderColor = UIColor(red: 27/255, green: 95/255, blue: 180/255, alpha: 1).cgColor
+            nameTextField.layer.borderColor = UIColor.gray.cgColor
+            nameTextField.layer.borderWidth = 0.5
+        default:
+            break
+            
+        }
+
+    }
     // func called when saveButton is pressed
     @objc func savePressed() {
-
-       guard  reviewTextField.text != "" else {
+        
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        imageView.image = #imageLiteral(resourceName: "icons8-error-26")
-        reviewTextField.rightView = imageView
-        reviewTextField.rightViewMode = .always
+        reviewTextField.rightViewMode = .never
+        nameTextField.rightViewMode = .never
 
-        reviewTextField.layer.borderColor = UIColor.red.cgColor
-        reviewTextField.layer.borderWidth = 2
-        reviewTextField.placeholder = "No text added"
+        reviewTextField.layer.borderColor = UIColor.gray.cgColor
+        reviewTextField.layer.borderWidth = 0.5
+        reviewTextField.placeholder = " Type review"
+
+        nameTextField.layer.borderColor = UIColor.gray.cgColor
+        nameTextField.layer.borderWidth = 0.5
+        nameTextField.placeholder = " Type review"
+
         
+        guard  nameTextField.text != "" else {
+            
+            imageView.image = #imageLiteral(resourceName: "icons8-error-26")
+            nameTextField.rightView = imageView
+            nameTextField.rightViewMode = .always
+            
+            nameTextField.layer.borderColor = UIColor.red.cgColor
+            nameTextField.layer.borderWidth = 2
+            nameTextField.placeholder = " No text added"
+            
+            return
+        }
+       guard  reviewTextField.text != "" else {
+
+            imageView.image = #imageLiteral(resourceName: "icons8-error-26")
+            reviewTextField.rightView = imageView
+            reviewTextField.rightViewMode = .always
+            reviewTextField.layer.borderColor = UIColor.red.cgColor
+            reviewTextField.layer.borderWidth = 2
+            reviewTextField.placeholder = " No text added"
+
         return
         }
-        
+
         reviewsVC?.createReview(newReview: reviewTextField.text!)
         print(reviewTextField.text!)
   
