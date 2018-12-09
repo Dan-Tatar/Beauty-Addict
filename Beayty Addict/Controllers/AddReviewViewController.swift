@@ -12,7 +12,7 @@ import Cosmos
 import TinyConstraints
 
 
-class AddReviewViewController: UIViewController {
+class AddReviewViewController: UIViewController, UITextFieldDelegate {
 
    
     var doneSaving: (() -> ())?
@@ -29,8 +29,9 @@ class AddReviewViewController: UIViewController {
         cosmosView.didTouchCosmos = { rating in
             print("\(rating)")
             
-         
         }
+        nameTextField.delegate = self
+        reviewTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -121,7 +122,24 @@ class AddReviewViewController: UIViewController {
         return button
     }()
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case nameTextField:
+                 nameTextField.layer.borderWidth = 1
+            nameTextField.layer.borderColor = UIColor(red: 27/255, green: 95/255, blue: 180/255, alpha: 1).cgColor
+                reviewTextField.layer.borderColor = UIColor.gray.cgColor
+                 reviewTextField.layer.borderWidth = 0.5
+        case reviewTextField:
+            reviewTextField.layer.borderWidth = 1
+            reviewTextField.layer.borderColor = UIColor(red: 27/255, green: 95/255, blue: 180/255, alpha: 1).cgColor
+            nameTextField.layer.borderColor = UIColor.gray.cgColor
+            nameTextField.layer.borderWidth = 0.5
+        default:
+            break
+            
+        }
 
+    }
     // func called when saveButton is pressed
     @objc func savePressed() {
         
@@ -130,12 +148,12 @@ class AddReviewViewController: UIViewController {
         reviewTextField.rightViewMode = .never
         nameTextField.rightViewMode = .never
 
-        reviewTextField.layer.borderColor = UIColor.clear.cgColor
-        reviewTextField.layer.borderWidth = 0
+        reviewTextField.layer.borderColor = UIColor.gray.cgColor
+        reviewTextField.layer.borderWidth = 0.5
         reviewTextField.placeholder = " Type review"
 
-        nameTextField.layer.borderColor = UIColor.clear.cgColor
-        nameTextField.layer.borderWidth = 0
+        nameTextField.layer.borderColor = UIColor.gray.cgColor
+        nameTextField.layer.borderWidth = 0.5
         nameTextField.placeholder = " Type review"
 
         
