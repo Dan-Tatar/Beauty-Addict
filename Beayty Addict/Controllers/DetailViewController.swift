@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        layoutSubviews()
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,7 +84,7 @@ class DetailViewController: UIViewController {
         navigationController?.pushViewController(reviewViewController, animated: true)
     }
 
-    func layoutSubviews() {
+    func setupViews() {
         
         view.addSubview(productImage1)
         view.addSubview(productName1)
