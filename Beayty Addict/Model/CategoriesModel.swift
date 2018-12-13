@@ -14,6 +14,7 @@ class MainCathegories {
     var category: String
     var image: UIImage
     var products = [Product]()
+    
     init(category: String, image: UIImage, productList: [Product]) {
         self.category = category
         self.image = image
@@ -21,13 +22,10 @@ class MainCathegories {
     }
     
     static func categoriesArray() -> [MainCathegories] {
-        
         return [self.mascaraArray(), self.lipstickArray(), self.foundationArray(), self.makeupArray()]
-        
     }
     
     static func mascaraArray() -> MainCathegories {
-        
         var products = [Product]()
         var maybelline = Product(name: "Maybelline Mascara Lash Sensational",
                                  imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
@@ -43,6 +41,7 @@ class MainCathegories {
         products.append(mascara)
         return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: products)
     }
+    
     static func lipstickArray() -> MainCathegories {
         
         var products = [Product]()
@@ -56,7 +55,6 @@ class MainCathegories {
     }
     
     static func foundationArray() -> MainCathegories {
-        
         var products = [Product]()
         var macFoundation = Product(name: "Mac Foundation",
                                     imageProduct: #imageLiteral(resourceName: "macFoundation"),
@@ -66,6 +64,7 @@ class MainCathegories {
         products.append(macFoundation)
         return MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"), productList: products)
     }
+    
     static func makeupArray() -> MainCathegories {
         
         var products = [Product]()
