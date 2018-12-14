@@ -50,6 +50,7 @@ class ReviewCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.settings.fillMode = .full
         view.settings.starSize = 26
+        view.settings.updateOnTouch = false
         return view
     }()
     

@@ -14,6 +14,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var productReviews: Product?
     var reviews = [Reviews]()
+    
     func createReview(newReview: String) {
         productReviews?.review.append(newReview)
         
