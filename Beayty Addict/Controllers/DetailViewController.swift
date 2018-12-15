@@ -73,7 +73,6 @@ class DetailViewController: UIViewController {
         button.setTitle( "See Reviews", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.setTitleColor(UIColor.white, for: .normal)
-        
         button.addTarget(self, action:  #selector(review), for: .touchUpInside)
         return button
     }()
@@ -83,45 +82,37 @@ class DetailViewController: UIViewController {
         reviewViewController.productReviews = product
         navigationController?.pushViewController(reviewViewController, animated: true)
     }
-
+    
     func layoutSubviews() {
-        
         view.addSubview(productImage1)
         view.addSubview(productName1)
         view.addSubview(productDescription1)
         view.addSubview(productRating1)
         view.addSubview(seeReviews)
-        
         // productImage constraints
         productImage1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         productImage1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor , constant: 0).isActive = true
         productImage1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         productImage1.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        
         // ProductName constraints
         productName1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         productName1.topAnchor.constraint(equalTo: productImage1.bottomAnchor , constant: 8).isActive = true
         productName1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
         productName1.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
         // productDesription constraints
         productDescription1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         productDescription1.topAnchor.constraint(equalTo: productName1.bottomAnchor , constant: 8).isActive = true
         productDescription1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
-
         productDescription1.heightAnchor.constraint(equalToConstant: 150).isActive = true
-        
         //productRating constraints
         productRating1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         productRating1.topAnchor.constraint(equalTo: productDescription1.bottomAnchor, constant: 8).isActive = true
         productRating1.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
         // seeReview constraints
         seeReviews.topAnchor.constraint(equalTo: productDescription1.bottomAnchor , constant: 8).isActive = true
         seeReviews.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
         seeReviews.heightAnchor.constraint(equalToConstant: 35).isActive = true
         seeReviews.widthAnchor.constraint(equalToConstant: 140).isActive = true
-        
     }
 }
 

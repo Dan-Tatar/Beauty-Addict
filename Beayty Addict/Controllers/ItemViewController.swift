@@ -10,14 +10,11 @@ import UIKit
 
 class ItemViewController:  UITableViewController {
     
-    
     var  items: [MainCathegories] = []
-    
     let productID =  "productID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ProductCell.self, forCellReuseIdentifier:  productID)
@@ -27,11 +24,10 @@ class ItemViewController:  UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tableView.reloadData()
     }
-    
 }
+
 extension ItemViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,7 +37,6 @@ extension ItemViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section].products[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: productID) as? ProductCell
         cell?.setProducts(list: item)
         cell?.selectionStyle = .none
@@ -53,14 +48,12 @@ extension ItemViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let detailViewController = DetailViewController()
         if let selectedRow = tableView.indexPathForSelectedRow {
             detailViewController.product =  items[indexPath.section].products[indexPath.row]
         }
         navigationController?.pushViewController( detailViewController, animated: true)
     }
-    
 }
 
 

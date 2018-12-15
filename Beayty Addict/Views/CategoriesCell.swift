@@ -47,20 +47,20 @@ class CategoriesCell: UITableViewCell {
         beautyCategoriesImageView.image = categories.image
         nameLabel.text = categories.category
     }
-   
+    
     func setupViews() {
         addSubview(beautyCategoriesImageView)
         addSubview(nameLabel)
         
+        //constraints beautyCategoriesImageView
         beautyCategoriesImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         beautyCategoriesImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
         beautyCategoriesImageView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
         beautyCategoriesImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
-        
+        //constraints nameLabel
         nameLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 70).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -70).isActive = true
         nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
     }
-    
 }
