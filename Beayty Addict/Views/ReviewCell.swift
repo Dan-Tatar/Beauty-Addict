@@ -48,7 +48,7 @@ class ReviewCell: UITableViewCell {
     lazy var cosmosViewLabel: CosmosView = {
         var view = CosmosView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.settings.fillMode = .full
+        view.settings.fillMode = .half
         view.settings.starSize = 26
         view.settings.updateOnTouch = false
         return view

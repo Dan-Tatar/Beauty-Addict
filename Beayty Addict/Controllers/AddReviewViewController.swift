@@ -70,7 +70,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate {
     lazy var cosmosView: CosmosView = {
         var view = CosmosView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.settings.fillMode = .full
+        view.settings.fillMode = .half
         view.settings.starSize = 26
         return view
     }()
