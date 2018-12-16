@@ -23,11 +23,30 @@
 		109BAEF221736F0E00FBCD11 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109BAEF121736F0E00FBCD11 /* HomeViewController.swift */; };
 		109BAEF42173757700FBCD11 /* CustomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109BAEF32173757600FBCD11 /* CustomeTabBarController.swift */; };
 		109BAEF6217A44DE00FBCD11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 109BAEF5217A44DE00FBCD11 /* GoogleService-Info.plist */; };
+		10A3614621C59F3A000CF6B0 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3614521C59F3A000CF6B0 /* Tests.swift */; };
+		10A3614E21C5A423000CF6B0 /* Beayty_AddictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3614D21C5A423000CF6B0 /* Beayty_AddictTests.swift */; };
 		10FC728120C8693700D6244A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728020C8693700D6244A /* ProductCell.swift */; };
 		10FC728320D3043B00D6244A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728220D3043B00D6244A /* DetailViewController.swift */; };
 		10FC728520D3ADB800D6244A /* DetailProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728420D3ADB800D6244A /* DetailProductCell.swift */; };
 		E044F3DAF89E4C180B8C057C /* Pods_Beayty_Addict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10A3614021C58B27000CF6B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 105ED61220BC4E010058C68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 105ED61920BC4E010058C68D;
+			remoteInfo = "Beayty Addict";
+		};
+		10A3615021C5A423000CF6B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 105ED61220BC4E010058C68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 105ED61920BC4E010058C68D;
+			remoteInfo = "Beayty Addict";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		105ED61A20BC4E010058C68D /* Beayty Addict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beayty Addict.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +67,11 @@
 		109BAEF121736F0E00FBCD11 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		109BAEF32173757600FBCD11 /* CustomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTabBarController.swift; sourceTree = "<group>"; };
 		109BAEF5217A44DE00FBCD11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10A3613B21C58B27000CF6B0 /* XCUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10A3614521C59F3A000CF6B0 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		10A3614B21C5A423000CF6B0 /* Beayty AddictTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beayty AddictTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10A3614D21C5A423000CF6B0 /* Beayty_AddictTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beayty_AddictTests.swift; sourceTree = "<group>"; };
+		10A3614F21C5A423000CF6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10FC728020C8693700D6244A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		10FC728220D3043B00D6244A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		10FC728420D3ADB800D6244A /* DetailProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductCell.swift; sourceTree = "<group>"; };
@@ -62,6 +86,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E044F3DAF89E4C180B8C057C /* Pods_Beayty_Addict.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A3613821C58B27000CF6B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A3614821C5A423000CF6B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +123,8 @@
 		105ED61120BC4E010058C68D = {
 			isa = PBXGroup;
 			children = (
-				105ED61C20BC4E010058C68D /* Beayty Addict */,
+				105ED61C20BC4E010058C68D /* Beauty Addict */,
+				10A3614C21C5A423000CF6B0 /* Beayty AddictTests */,
 				105ED61B20BC4E010058C68D /* Products */,
 				107E8C962158059C00BDFE2C /* Reviews */,
 				107E8C9A215ACBF200BDFE2C /* CollectionViewController.swift */,
@@ -98,11 +137,13 @@
 			isa = PBXGroup;
 			children = (
 				105ED61A20BC4E010058C68D /* Beayty Addict.app */,
+				10A3613B21C58B27000CF6B0 /* XCUnitTests.xctest */,
+				10A3614B21C5A423000CF6B0 /* Beayty AddictTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		105ED61C20BC4E010058C68D /* Beayty Addict */ = {
+		105ED61C20BC4E010058C68D /* Beauty Addict */ = {
 			isa = PBXGroup;
 			children = (
 				105ED61D20BC4E010058C68D /* AppDelegate.swift */,
@@ -114,8 +155,9 @@
 				10FC728420D3ADB800D6244A /* DetailProductCell.swift */,
 				105ED62B20BC4E010058C68D /* Info.plist */,
 				109BAEF5217A44DE00FBCD11 /* GoogleService-Info.plist */,
+				10A3614521C59F3A000CF6B0 /* Tests.swift */,
 			);
-			path = "Beayty Addict";
+			path = "Beauty Addict";
 			sourceTree = "<group>";
 		};
 		105ED63320BCA8BF0058C68D /* Model */ = {
@@ -125,6 +167,15 @@
 				105ED63420BCA8FB0058C68D /* Product.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		10A3614C21C5A423000CF6B0 /* Beayty AddictTests */ = {
+			isa = PBXGroup;
+			children = (
+				10A3614D21C5A423000CF6B0 /* Beayty_AddictTests.swift */,
+				10A3614F21C5A423000CF6B0 /* Info.plist */,
+			);
+			path = "Beayty AddictTests";
 			sourceTree = "<group>";
 		};
 		10FC727F20C8690200D6244A /* Views */ = {
@@ -176,19 +227,65 @@
 			productReference = 105ED61A20BC4E010058C68D /* Beayty Addict.app */;
 			productType = "com.apple.product-type.application";
 		};
+		10A3613A21C58B27000CF6B0 /* XCUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10A3614221C58B27000CF6B0 /* Build configuration list for PBXNativeTarget "XCUnitTests" */;
+			buildPhases = (
+				10A3613721C58B27000CF6B0 /* Sources */,
+				10A3613821C58B27000CF6B0 /* Frameworks */,
+				10A3613921C58B27000CF6B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10A3614121C58B27000CF6B0 /* PBXTargetDependency */,
+			);
+			name = XCUnitTests;
+			productName = XCUnitTests;
+			productReference = 10A3613B21C58B27000CF6B0 /* XCUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10A3614A21C5A423000CF6B0 /* Beayty AddictTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10A3615221C5A423000CF6B0 /* Build configuration list for PBXNativeTarget "Beayty AddictTests" */;
+			buildPhases = (
+				10A3614721C5A423000CF6B0 /* Sources */,
+				10A3614821C5A423000CF6B0 /* Frameworks */,
+				10A3614921C5A423000CF6B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10A3615121C5A423000CF6B0 /* PBXTargetDependency */,
+			);
+			name = "Beayty AddictTests";
+			productName = "Beayty AddictTests";
+			productReference = 10A3614B21C5A423000CF6B0 /* Beayty AddictTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		105ED61220BC4E010058C68D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Dany;
 				TargetAttributes = {
 					105ED61920BC4E010058C68D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+					};
+					10A3613A21C58B27000CF6B0 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 105ED61920BC4E010058C68D;
+					};
+					10A3614A21C5A423000CF6B0 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 105ED61920BC4E010058C68D;
 					};
 				};
 			};
@@ -206,6 +303,8 @@
 			projectRoot = "";
 			targets = (
 				105ED61920BC4E010058C68D /* Beayty Addict */,
+				10A3613A21C58B27000CF6B0 /* XCUnitTests */,
+				10A3614A21C5A423000CF6B0 /* Beayty AddictTests */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +317,20 @@
 				105ED62A20BC4E010058C68D /* LaunchScreen.storyboard in Resources */,
 				105ED62720BC4E010058C68D /* Assets.xcassets in Resources */,
 				109BAEF6217A44DE00FBCD11 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A3613921C58B27000CF6B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A3614921C5A423000CF6B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +421,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10A3613721C58B27000CF6B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A3614621C59F3A000CF6B0 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A3614721C5A423000CF6B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A3614E21C5A423000CF6B0 /* Beayty_AddictTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10A3614121C58B27000CF6B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 105ED61920BC4E010058C68D /* Beayty Addict */;
+			targetProxy = 10A3614021C58B27000CF6B0 /* PBXContainerItemProxy */;
+		};
+		10A3615121C5A423000CF6B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 105ED61920BC4E010058C68D /* Beayty Addict */;
+			targetProxy = 10A3615021C5A423000CF6B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		105ED62820BC4E010058C68D /* LaunchScreen.storyboard */ = {
@@ -372,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -425,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -439,7 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Beayty Addict/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Beauty Addict/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dany.Beayty-Addict";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,12 +596,86 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Beayty Addict/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Beauty Addict/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dany.Beayty-Addict";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10A3614321C58B27000CF6B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/Core/Sources/**";
+				INFOPLIST_FILE = XCUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dany.XCUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beayty Addict.app/Beayty Addict";
+			};
+			name = Debug;
+		};
+		10A3614421C58B27000CF6B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/Core/Sources/**";
+				INFOPLIST_FILE = XCUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dany.XCUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beayty Addict.app/Beayty Addict";
+			};
+			name = Release;
+		};
+		10A3615321C5A423000CF6B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Beayty AddictTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dany.Beayty-AddictTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beayty Addict.app/Beayty Addict";
+			};
+			name = Debug;
+		};
+		10A3615421C5A423000CF6B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Beayty AddictTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dany.Beayty-AddictTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beayty Addict.app/Beayty Addict";
 			};
 			name = Release;
 		};
@@ -480,6 +696,24 @@
 			buildConfigurations = (
 				105ED62F20BC4E010058C68D /* Debug */,
 				105ED63020BC4E010058C68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10A3614221C58B27000CF6B0 /* Build configuration list for PBXNativeTarget "XCUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A3614321C58B27000CF6B0 /* Debug */,
+				10A3614421C58B27000CF6B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10A3615221C5A423000CF6B0 /* Build configuration list for PBXNativeTarget "Beayty AddictTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A3615321C5A423000CF6B0 /* Debug */,
+				10A3615421C5A423000CF6B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
