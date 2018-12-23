@@ -26,7 +26,7 @@
 		10FC728120C8693700D6244A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728020C8693700D6244A /* ProductCell.swift */; };
 		10FC728320D3043B00D6244A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728220D3043B00D6244A /* DetailViewController.swift */; };
 		10FC728520D3ADB800D6244A /* DetailProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728420D3ADB800D6244A /* DetailProductCell.swift */; };
-		E044F3DAF89E4C180B8C057C /* Pods_Beayty_Addict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */; };
+		1B9715FA8420007E4286A3A5 /* Pods_Beayty_Addict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +51,8 @@
 		10FC728020C8693700D6244A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		10FC728220D3043B00D6244A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		10FC728420D3ADB800D6244A /* DetailProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductCell.swift; sourceTree = "<group>"; };
-		24E71300A3CAE162DE01E145 /* Pods-Beayty Addict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.debug.xcconfig"; sourceTree = "<group>"; };
-		56BD15604B6AC5FF5A6DD7A7 /* Pods-Beayty Addict.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.release.xcconfig"; sourceTree = "<group>"; };
+		37FAED4600C4D8380CD48516 /* Pods-Beayty Addict.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.release.xcconfig"; sourceTree = "<group>"; };
+		749556322E657398602AFB16 /* Pods-Beayty Addict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.debug.xcconfig"; sourceTree = "<group>"; };
 		DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beayty_Addict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,13 +61,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E044F3DAF89E4C180B8C057C /* Pods_Beayty_Addict.framework in Frameworks */,
+				1B9715FA8420007E4286A3A5 /* Pods_Beayty_Addict.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07D489B26A36223FC91FFD27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				749556322E657398602AFB16 /* Pods-Beayty Addict.debug.xcconfig */,
+				37FAED4600C4D8380CD48516 /* Pods-Beayty Addict.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1046A08021204B29006CA6F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +98,8 @@
 				105ED61B20BC4E010058C68D /* Products */,
 				107E8C962158059C00BDFE2C /* Reviews */,
 				107E8C9A215ACBF200BDFE2C /* CollectionViewController.swift */,
-				97D1289A94444841BBB10353 /* Pods */,
 				D89F55C8A3614BFD7E01C2AD /* Frameworks */,
+				07D489B26A36223FC91FFD27 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,15 +146,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		97D1289A94444841BBB10353 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				24E71300A3CAE162DE01E145 /* Pods-Beayty Addict.debug.xcconfig */,
-				56BD15604B6AC5FF5A6DD7A7 /* Pods-Beayty Addict.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D89F55C8A3614BFD7E01C2AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,11 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 105ED62E20BC4E010058C68D /* Build configuration list for PBXNativeTarget "Beayty Addict" */;
 			buildPhases = (
-				55CBF80E88BC6E5EB010DF24 /* [CP] Check Pods Manifest.lock */,
+				77F2DDE24E3E3817C1E08D3E /* [CP] Check Pods Manifest.lock */,
 				105ED61620BC4E010058C68D /* Sources */,
 				105ED61720BC4E010058C68D /* Frameworks */,
 				105ED61820BC4E010058C68D /* Resources */,
-				B6F6D41EE54E43C6E51D28CA /* [CP] Embed Pods Frameworks */,
+				AC9EF6BCC09AD79C037D96B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,7 +182,7 @@
 		105ED61220BC4E010058C68D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Dany;
 				TargetAttributes = {
@@ -224,20 +224,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		55CBF80E88BC6E5EB010DF24 /* [CP] Check Pods Manifest.lock */ = {
+		77F2DDE24E3E3817C1E08D3E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Beayty Addict-checkManifestLockResult.txt",
 			);
@@ -246,32 +242,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B6F6D41EE54E43C6E51D28CA /* [CP] Embed Pods Frameworks */ = {
+		AC9EF6BCC09AD79C037D96B7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -435,7 +427,7 @@
 		};
 		105ED62F20BC4E010058C68D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24E71300A3CAE162DE01E145 /* Pods-Beayty Addict.debug.xcconfig */;
+			baseConfigurationReference = 749556322E657398602AFB16 /* Pods-Beayty Addict.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,7 +442,7 @@
 		};
 		105ED63020BC4E010058C68D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56BD15604B6AC5FF5A6DD7A7 /* Pods-Beayty Addict.release.xcconfig */;
+			baseConfigurationReference = 37FAED4600C4D8380CD48516 /* Pods-Beayty Addict.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
