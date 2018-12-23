@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Beayty_Addict
 
 class Beayty_AddictTests: XCTestCase {
 

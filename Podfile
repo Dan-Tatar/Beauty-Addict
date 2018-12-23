@@ -16,4 +16,9 @@ pod 'Cosmos'
 pod 'TinyConstraints'
 
   
+  target 'Beayty AddictTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
 end

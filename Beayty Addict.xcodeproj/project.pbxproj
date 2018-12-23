@@ -27,7 +27,19 @@
 		10FC728320D3043B00D6244A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728220D3043B00D6244A /* DetailViewController.swift */; };
 		10FC728520D3ADB800D6244A /* DetailProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728420D3ADB800D6244A /* DetailProductCell.swift */; };
 		1B9715FA8420007E4286A3A5 /* Pods_Beayty_Addict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */; };
+		6E0BA117F440DF7D9AE29254 /* Pods_Beayty_AddictTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24C09ED7F3FE44CEBF6A5AE /* Pods_Beayty_AddictTests.framework */; };
+		9FACA6E621D02E5A00606A50 /* Beayty_AddictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACA6E521D02E5A00606A50 /* Beayty_AddictTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FACA6E821D02E5A00606A50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 105ED61220BC4E010058C68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 105ED61920BC4E010058C68D;
+			remoteInfo = "Beayty Addict";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		105ED61A20BC4E010058C68D /* Beayty Addict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beayty Addict.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +64,13 @@
 		10FC728220D3043B00D6244A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		10FC728420D3ADB800D6244A /* DetailProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductCell.swift; sourceTree = "<group>"; };
 		37FAED4600C4D8380CD48516 /* Pods-Beayty Addict.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.release.xcconfig"; sourceTree = "<group>"; };
+		51F75B2120B519082F9F4B4D /* Pods-Beayty AddictTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty AddictTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty AddictTests/Pods-Beayty AddictTests.debug.xcconfig"; sourceTree = "<group>"; };
 		749556322E657398602AFB16 /* Pods-Beayty Addict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.debug.xcconfig"; sourceTree = "<group>"; };
+		9FACA6E321D02E5A00606A50 /* Beayty AddictTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beayty AddictTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACA6E521D02E5A00606A50 /* Beayty_AddictTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beayty_AddictTests.swift; sourceTree = "<group>"; };
+		9FACA6E721D02E5A00606A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24C09ED7F3FE44CEBF6A5AE /* Pods_Beayty_AddictTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beayty_AddictTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4394991B5BE752B8F00219 /* Pods-Beayty AddictTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty AddictTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty AddictTests/Pods-Beayty AddictTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beayty_Addict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +83,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FACA6E021D02E5A00606A50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0BA117F440DF7D9AE29254 /* Pods_Beayty_AddictTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +99,8 @@
 			children = (
 				749556322E657398602AFB16 /* Pods-Beayty Addict.debug.xcconfig */,
 				37FAED4600C4D8380CD48516 /* Pods-Beayty Addict.release.xcconfig */,
+				51F75B2120B519082F9F4B4D /* Pods-Beayty AddictTests.debug.xcconfig */,
+				BA4394991B5BE752B8F00219 /* Pods-Beayty AddictTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -95,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				105ED61C20BC4E010058C68D /* Beayty Addict */,
+				9FACA6E421D02E5A00606A50 /* Beayty AddictTests */,
 				105ED61B20BC4E010058C68D /* Products */,
 				107E8C962158059C00BDFE2C /* Reviews */,
 				107E8C9A215ACBF200BDFE2C /* CollectionViewController.swift */,
@@ -107,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				105ED61A20BC4E010058C68D /* Beayty Addict.app */,
+				9FACA6E321D02E5A00606A50 /* Beayty AddictTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,10 +176,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9FACA6E421D02E5A00606A50 /* Beayty AddictTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FACA6E521D02E5A00606A50 /* Beayty_AddictTests.swift */,
+				9FACA6E721D02E5A00606A50 /* Info.plist */,
+			);
+			path = "Beayty AddictTests";
+			sourceTree = "<group>";
+		};
 		D89F55C8A3614BFD7E01C2AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */,
+				B24C09ED7F3FE44CEBF6A5AE /* Pods_Beayty_AddictTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,6 +216,25 @@
 			productReference = 105ED61A20BC4E010058C68D /* Beayty Addict.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9FACA6E221D02E5A00606A50 /* Beayty AddictTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FACA6EA21D02E5A00606A50 /* Build configuration list for PBXNativeTarget "Beayty AddictTests" */;
+			buildPhases = (
+				101A61BB26CF004545C6C131 /* [CP] Check Pods Manifest.lock */,
+				9FACA6DF21D02E5A00606A50 /* Sources */,
+				9FACA6E021D02E5A00606A50 /* Frameworks */,
+				9FACA6E121D02E5A00606A50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FACA6E921D02E5A00606A50 /* PBXTargetDependency */,
+			);
+			name = "Beayty AddictTests";
+			productName = "Beayty AddictTests";
+			productReference = 9FACA6E321D02E5A00606A50 /* Beayty AddictTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +248,11 @@
 					105ED61920BC4E010058C68D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+					};
+					9FACA6E221D02E5A00606A50 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 105ED61920BC4E010058C68D;
 					};
 				};
 			};
@@ -206,6 +270,7 @@
 			projectRoot = "";
 			targets = (
 				105ED61920BC4E010058C68D /* Beayty Addict */,
+				9FACA6E221D02E5A00606A50 /* Beayty AddictTests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,9 +286,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FACA6E121D02E5A00606A50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		101A61BB26CF004545C6C131 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Beayty AddictTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		77F2DDE24E3E3817C1E08D3E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,7 +390,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FACA6DF21D02E5A00606A50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACA6E621D02E5A00606A50 /* Beayty_AddictTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FACA6E921D02E5A00606A50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 105ED61920BC4E010058C68D /* Beayty Addict */;
+			targetProxy = 9FACA6E821D02E5A00606A50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		105ED62820BC4E010058C68D /* LaunchScreen.storyboard */ = {
@@ -455,6 +561,45 @@
 			};
 			name = Release;
 		};
+		9FACA6EB21D02E5A00606A50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F75B2120B519082F9F4B4D /* Pods-Beayty AddictTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Beayty AddictTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dany.Beayty-AddictTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beayty Addict.app/Beayty Addict";
+			};
+			name = Debug;
+		};
+		9FACA6EC21D02E5A00606A50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA4394991B5BE752B8F00219 /* Pods-Beayty AddictTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Beayty AddictTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dany.Beayty-AddictTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beayty Addict.app/Beayty Addict";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,6 +617,15 @@
 			buildConfigurations = (
 				105ED62F20BC4E010058C68D /* Debug */,
 				105ED63020BC4E010058C68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FACA6EA21D02E5A00606A50 /* Build configuration list for PBXNativeTarget "Beayty AddictTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACA6EB21D02E5A00606A50 /* Debug */,
+				9FACA6EC21D02E5A00606A50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
