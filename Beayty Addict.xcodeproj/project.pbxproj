@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10011F6D21DE99AB00653713 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10011F6C21DE99AB00653713 /* AddReviewView.swift */; };
 		105ED61E20BC4E010058C68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED61D20BC4E010058C68D /* AppDelegate.swift */; };
 		105ED62020BC4E010058C68D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED61F20BC4E010058C68D /* CategoriesViewController.swift */; };
 		105ED62220BC4E010058C68D /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED62120BC4E010058C68D /* AddReviewViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10011F6C21DE99AB00653713 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
 		105ED61A20BC4E010058C68D /* Beayty Addict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beayty Addict.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		105ED61D20BC4E010058C68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105ED61F20BC4E010058C68D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				105ED63620BDBDC50058C68D /* CategoriesCell.swift */,
 				10FC728020C8693700D6244A /* ProductCell.swift */,
 				107E8C9C215AD43A00BDFE2C /* ReviewCell.swift */,
+				10011F6C21DE99AB00653713 /* AddReviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				105ED63920C2F8C50058C68D /* ItemViewController.swift in Sources */,
 				105ED62220BC4E010058C68D /* AddReviewViewController.swift in Sources */,
 				109BAEF221736F0E00FBCD11 /* HomeViewController.swift in Sources */,
+				10011F6D21DE99AB00653713 /* AddReviewView.swift in Sources */,
 				105ED63520BCA8FB0058C68D /* Product.swift in Sources */,
 				105ED61E20BC4E010058C68D /* AppDelegate.swift in Sources */,
 				109BAEF42173757700FBCD11 /* CustomeTabBarController.swift in Sources */,
