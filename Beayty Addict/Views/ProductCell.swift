@@ -30,8 +30,9 @@ class ProductCell: UITableViewCell {
         return ip
     }()
     
-    var nameProduct: UITextView = {
-        let np = UITextView()
+    var nameProduct: UILabel = {
+        let np = UILabel()
+        np.numberOfLines = 0
         np.font = UIFont.boldSystemFont(ofSize: 16)
         np.translatesAutoresizingMaskIntoConstraints = false
         return np
