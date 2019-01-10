@@ -16,9 +16,9 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var reviews = [Reviews]()
     
     func createReview(newReview: String) {
-        productReviews?.review.append(newReview)
+//        productReviews?.review.append(newReview)
         
-        print(productReviews?.review)
+//        print(productReviews?.review)
         
     }
     var cellID = "CellID"

@@ -12,7 +12,7 @@
 		105ED62220BC4E010058C68D /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED62120BC4E010058C68D /* AddReviewViewController.swift */; };
 		105ED62720BC4E010058C68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105ED62620BC4E010058C68D /* Assets.xcassets */; };
 		105ED62A20BC4E010058C68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105ED62820BC4E010058C68D /* LaunchScreen.storyboard */; };
-		105ED63220BC59250058C68D /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED63120BC59250058C68D /* CategoriesModel.swift */; };
+		105ED63220BC59250058C68D /* MainCathegories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED63120BC59250058C68D /* MainCathegories.swift */; };
 		105ED63520BCA8FB0058C68D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED63420BCA8FB0058C68D /* Product.swift */; };
 		105ED63720BDBDC50058C68D /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED63620BDBDC50058C68D /* CategoriesCell.swift */; };
 		105ED63920C2F8C50058C68D /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED63820C2F8C50058C68D /* ItemViewController.swift */; };
@@ -26,6 +26,8 @@
 		10FC728120C8693700D6244A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728020C8693700D6244A /* ProductCell.swift */; };
 		10FC728320D3043B00D6244A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728220D3043B00D6244A /* DetailViewController.swift */; };
 		10FC728520D3ADB800D6244A /* DetailProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FC728420D3ADB800D6244A /* DetailProductCell.swift */; };
+		10FF0B7221E7DBCE00353C8D /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF0B7121E7DBCE00353C8D /* CategoryModel.swift */; };
+		10FF0B7421E7DDF600353C8D /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF0B7321E7DDF600353C8D /* Reviews.swift */; };
 		1B9715FA8420007E4286A3A5 /* Pods_Beayty_Addict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB917B81188A0D3F2D154C62 /* Pods_Beayty_Addict.framework */; };
 		6E0BA117F440DF7D9AE29254 /* Pods_Beayty_AddictTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24C09ED7F3FE44CEBF6A5AE /* Pods_Beayty_AddictTests.framework */; };
 		9FACA6E621D02E5A00606A50 /* Beayty_AddictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACA6E521D02E5A00606A50 /* Beayty_AddictTests.swift */; };
@@ -49,7 +51,7 @@
 		105ED62620BC4E010058C68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105ED62920BC4E010058C68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		105ED62B20BC4E010058C68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		105ED63120BC59250058C68D /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		105ED63120BC59250058C68D /* MainCathegories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCathegories.swift; sourceTree = "<group>"; };
 		105ED63420BCA8FB0058C68D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		105ED63620BDBDC50058C68D /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		105ED63820C2F8C50058C68D /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		10FC728020C8693700D6244A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		10FC728220D3043B00D6244A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		10FC728420D3ADB800D6244A /* DetailProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductCell.swift; sourceTree = "<group>"; };
+		10FF0B7121E7DBCE00353C8D /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		10FF0B7321E7DDF600353C8D /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		37FAED4600C4D8380CD48516 /* Pods-Beayty Addict.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.release.xcconfig"; sourceTree = "<group>"; };
 		51F75B2120B519082F9F4B4D /* Pods-Beayty AddictTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty AddictTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty AddictTests/Pods-Beayty AddictTests.debug.xcconfig"; sourceTree = "<group>"; };
 		749556322E657398602AFB16 /* Pods-Beayty Addict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beayty Addict.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beayty Addict/Pods-Beayty Addict.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +164,10 @@
 		105ED63320BCA8BF0058C68D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				105ED63120BC59250058C68D /* CategoriesModel.swift */,
+				105ED63120BC59250058C68D /* MainCathegories.swift */,
 				105ED63420BCA8FB0058C68D /* Product.swift */,
+				10FF0B7121E7DBCE00353C8D /* CategoryModel.swift */,
+				10FF0B7321E7DDF600353C8D /* Reviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				107E8C9921580AD100BDFE2C /* ReviewsViewControllerTableViewController.swift in Sources */,
 				10FC728320D3043B00D6244A /* DetailViewController.swift in Sources */,
 				105ED63920C2F8C50058C68D /* ItemViewController.swift in Sources */,
+				10FF0B7221E7DBCE00353C8D /* CategoryModel.swift in Sources */,
 				105ED62220BC4E010058C68D /* AddReviewViewController.swift in Sources */,
 				109BAEF221736F0E00FBCD11 /* HomeViewController.swift in Sources */,
 				105ED63520BCA8FB0058C68D /* Product.swift in Sources */,
@@ -384,7 +391,8 @@
 				10FC728520D3ADB800D6244A /* DetailProductCell.swift in Sources */,
 				10FC728120C8693700D6244A /* ProductCell.swift in Sources */,
 				105ED62020BC4E010058C68D /* CategoriesViewController.swift in Sources */,
-				105ED63220BC59250058C68D /* CategoriesModel.swift in Sources */,
+				105ED63220BC59250058C68D /* MainCathegories.swift in Sources */,
+				10FF0B7421E7DDF600353C8D /* Reviews.swift in Sources */,
 				107E8C972158059C00BDFE2C /* Reviews in Sources */,
 				107E8C9D215AD43A00BDFE2C /* ReviewCell.swift in Sources */,
 			);

@@ -82,3 +82,75 @@ import Foundation
 //    
 //    
 //}
+
+
+
+
+
+
+//    static func mascaraArray() -> MainCathegories {
+//        var products = [Product]()
+//        var maybelline = Product(name: "Maybelline Mascara Lash Sensational",
+//                                 imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
+//                                 description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined")
+//        products.append(maybelline)
+//        var mascara = Product(name: "Mascara Lash Sensational",
+//                              imageProduct: #imageLiteral(resourceName: "mascara"),
+//                              description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined")
+//        products.append(mascara)
+//        return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: products)
+//    }
+//    static func mascaraArray(product: Product) -> MainCathegories {
+//        var products = [Product]()
+//
+//        products.append(product)
+//        return MainCathegories(category: "Mascara", image: #imageLiteral(resourceName: "mascara"), productList: mascara)
+//    }
+//    static func lipstickArray() -> MainCathegories {
+//
+//        var products = [Product]()
+//        var dior = Product(name: "LipstickDior",
+//                           imageProduct: #imageLiteral(resourceName: "lipstickDior"),
+//                           description: "Lipstick designed for all lips")
+//        products.append(dior)
+//        return MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"), productList: products)
+//    }
+//
+//    static func foundationArray() -> MainCathegories {
+//        var products = [Product]()
+//        var macFoundation = Product(name: "Mac Foundation",
+//                                    imageProduct: #imageLiteral(resourceName: "macFoundation"),
+//                                    description: "Foundation without paraben")
+//        products.append(macFoundation)
+//        return MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"), productList: products)
+//    }
+//
+//    static func makeupArray() -> MainCathegories {
+//
+//        var products = [Product]()
+//        var maybelline = Product(name: "Makeup",
+//                                 imageProduct: #imageLiteral(resourceName: "makeUpChanel-1"),
+//                                 description: "High quality makeup")
+//        products.append(maybelline)
+//        return MainCathegories(category: "Makeup", image: #imageLiteral(resourceName: "makeUp"), productList: products)
+//    }
+    
+
+
+//   func retrieveData() {
+//        let reviewDB = Database.database().reference().child("Product")
+//
+//        reviewDB.observe(.childAdded, with: { (snapshot) in
+//            let snapShotValue = snapshot.value as? Dictionary<String, Any>
+//            let name = snapShotValue?["name"] as? String ?? ""
+//            let imageProduct = snapShotValue?["imageProduct"] as? String ?? ""
+//            let description = snapShotValue?["description"] as? String ?? ""
+//            let category = snapShotValue?["category"] as? String ?? ""
+//
+//            let product = Product(name: name, imageProduct: imageProduct, description: description, category: category)
+//            if product.category == "Mascara" {
+//                self.mascaraArray.append(product)
+//            }
+//
+//      })
+//    }

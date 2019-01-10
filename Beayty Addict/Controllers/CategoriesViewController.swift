@@ -10,16 +10,18 @@ import UIKit
 
 class CategoriesViewController: UITableViewController {
     
+    // Instantiate array of categories
     var categories = [MainCathegories]()
+
     let categoryID =  "categoryID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        categories = MainCathegories.categoriesArray()
         tableView.backgroundColor = .white
         tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)
+        categories = CategoriesModel().categoriesArray()
     }
 }
 

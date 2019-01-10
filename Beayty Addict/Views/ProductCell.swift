@@ -66,8 +66,8 @@ class ProductCell: UITableViewCell {
     }
     
     func setProducts(list: Product) {
-        imageProduct.image = list.imageProduct
+//        imageProduct.image = list.imageProduct
         nameProduct.text = list.name
-        ratingProduct.text = "Rating  " + String(list.rating)
+//        ratingProduct.text = "Rating  " + String(list.rating)
     }
 }

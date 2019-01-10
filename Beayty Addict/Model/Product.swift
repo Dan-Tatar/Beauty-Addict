@@ -12,27 +12,15 @@ import UIKit
 class Product {
     var name: String
     var imageProduct: UIImage
-    var description : String
-    var rating: Double
-    var review: [String]
-    var url: String
+    var description: String
+    var category: String
     
-    init(name: String, imageProduct: UIImage, description: String, rating: Double, review: [String], url: String) {
+    init(name: String, imageProduct: UIImage, description: String, category: String) {
         self.name = name
         self.imageProduct = imageProduct
         self.description = description
-        self.rating = rating
-        self.review = review
-        self.url = url
+        self.category = category
     }
 }
 
-struct Reviews  {
-    
-    var name: String
-    var userName: String
-    var rating: Double
-    var review: String
-    var date: String
-    
-}
+
