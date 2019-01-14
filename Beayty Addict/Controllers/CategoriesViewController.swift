@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class CategoriesViewController: UITableViewController {
     
-    // Instantiate array of categories
-    var categories = [MainCathegories]()
 
+    var categories = [MainCathegories]()
+    var fetchData: CategoriesModel = CategoriesModel()
     let categoryID =  "categoryID"
+    var mascaraArray = [Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +24,9 @@ class CategoriesViewController: UITableViewController {
         tableView.backgroundColor = .white
         tableView.register(CategoriesCell.self, forCellReuseIdentifier:  categoryID)
         categories = CategoriesModel().categoriesArray()
+         fetchData.retrieveData()
     }
 }
-
 extension CategoriesViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,10 +34,13 @@ extension CategoriesViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let category =  categories[indexPath.row]
+      
         let cell = tableView.dequeueReusableCell(withIdentifier: categoryID, for: indexPath) as! CategoriesCell
         cell.setCategories(categories: category)
         cell.selectionStyle = .none
+        
         return cell
     }
     

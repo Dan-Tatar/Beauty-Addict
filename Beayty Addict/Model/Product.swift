@@ -11,11 +11,11 @@ import UIKit
 
 class Product {
     var name: String
-    var imageProduct: UIImage
+    var imageProduct: String?
     var description: String
     var category: String
     
-    init(name: String, imageProduct: UIImage, description: String, category: String) {
+    init(name: String, imageProduct: String, description: String, category: String) {
         self.name = name
         self.imageProduct = imageProduct
         self.description = description

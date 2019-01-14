@@ -38,12 +38,12 @@ class Beayty_AddictTests: XCTestCase {
         
     var addRevieVieController = AddReviewViewController()
     var refference = addRevieVieController.ref
-    var node = refference.child("Test")
+    var node = refference.child("Product")
     
     var dict = ["data":"val"]
     var done = false
     
-    node.setValue(dict) { (error, result) in
+    node.childByAutoId().setValue(dict) { (error, result) in
         if error != nil {
             print(error)
         } else {

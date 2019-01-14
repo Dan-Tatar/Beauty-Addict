@@ -10,7 +10,7 @@ import UIKit
 
 class ItemViewController:  UITableViewController {
     
-    var  items: [MainCathegories] = []
+    var items: [MainCathegories] = []
     let productID =  "productID"
     
     override func viewDidLoad() {
@@ -20,6 +20,7 @@ class ItemViewController:  UITableViewController {
         tableView.register(ProductCell.self, forCellReuseIdentifier:  productID)
         navigationItem.backBarButtonItem?.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
+//       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +38,28 @@ extension ItemViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section].products[indexPath.row]
+//           print("Item category is\(items[indexPath.section].products[indexPath.row].category)")
         let cell = tableView.dequeueReusableCell(withIdentifier: productID) as? ProductCell
         cell?.setProducts(list: item)
         cell?.selectionStyle = .none
+        
+//        if let imageURL = item.imageProduct {
+//            let url = URL(string: imageURL)
+//                print("Url is\(url)")
+//
+//            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+//              print("Data is\(data)")
+//            if error != nil {
+//                  print("Error is\(error)")
+//                return }
+//                DispatchQueue.main.async {
+//
+//                    cell?.imageProduct.image = UIImage(data: data!)
+//                      print("Image is\(imageURL)")
+//                }
+//
+//            }).resume()
+//        }
         return cell!
     }
     
