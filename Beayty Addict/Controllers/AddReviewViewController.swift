@@ -15,7 +15,11 @@ import TinyConstraints
 class AddReviewViewController: UIViewController, UITextFieldDelegate {
     
   
-    var addReviewView = AddReviewView()
+//    var addReviewView = AddReviewView()
+    
+    var addReviewView: AddReviewView {
+        return view as! AddReviewView
+    }
     var doneSaving: (() -> ())?
     var reviewsVC : ReviewsViewController?
     let ref = Database.database().reference()

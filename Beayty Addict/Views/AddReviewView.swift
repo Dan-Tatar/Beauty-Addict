@@ -22,12 +22,12 @@ class AddReviewView : UIView {
     }
 
     let reviewUIView: UIView = {
-        let RU = UIView()
-        RU.translatesAutoresizingMaskIntoConstraints = false
-        RU.backgroundColor = UIColor.white
-        RU.layer.cornerRadius = 15
-        RU.backgroundColor = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0)
-        return RU
+        let ru = UIView()
+        ru.translatesAutoresizingMaskIntoConstraints = false
+        ru.backgroundColor = UIColor.white
+        ru.layer.cornerRadius = 15
+        ru.backgroundColor = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0)
+        return ru
     }()
     
     let cancelButton: UIButton = {
@@ -35,7 +35,6 @@ class AddReviewView : UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
-//        button.addTarget(self, action:  #selector(cancelPressed), for: .touchUpInside)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.setTitle("Cancel", for: .normal)
         button.layer.cornerRadius = 12
@@ -49,7 +48,6 @@ class AddReviewView : UIView {
         button.layer.cornerRadius = 8
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.backgroundColor = UIColor(red: 240/255, green: 111/255, blue: 107/255, alpha: 1)
-//        button.addTarget(self, action:  #selector(savePressed), for: .touchUpInside)
         button.setTitle("Save", for: .normal)
         button.layer.cornerRadius = 12
         return button
