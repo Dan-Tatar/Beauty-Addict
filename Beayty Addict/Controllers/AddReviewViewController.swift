@@ -16,6 +16,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate {
     
   
     var addReviewView = AddReviewView()
+    
     var doneSaving: (() -> ())?
     var reviewsVC : ReviewsViewController?
     let ref = Database.database().reference()
