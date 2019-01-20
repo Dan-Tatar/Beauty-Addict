@@ -10,7 +10,7 @@ import UIKit
 
 class ItemViewController:  UITableViewController {
     
-    var  items: [MainCathegories] = []
+    var items: [MainCathegories] = []
     let productID =  "productID"
     
     override func viewDidLoad() {
@@ -40,9 +40,25 @@ extension ItemViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: productID) as? ProductCell
         cell?.setProducts(list: item)
         cell?.selectionStyle = .none
+        let imageURL = item.imageProduct
+        
+            let url = URL(string: imageURL)
+                        URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                          print("Data is\(data)")
+                        if error != nil {
+                              print("Error is\(error)")
+                            return }
+                            DispatchQueue.main.async {
+            
+                                cell?.imageProduct.image = UIImage(data: data!)
+//                                self.imageDownloaded = UIImage(data: data!)
+                                  print("Image is\(imageURL)")
+                            }
+            
+                        }).resume()
         return cell!
     }
-    
+  
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
@@ -51,6 +67,7 @@ extension ItemViewController {
         let detailViewController = DetailViewController()
         if let selectedRow = tableView.indexPathForSelectedRow {
             detailViewController.product =  items[indexPath.section].products[indexPath.row]
+//            detailViewController.imageDetail = imageDownloaded
         }
         navigationController?.pushViewController( detailViewController, animated: true)
     }

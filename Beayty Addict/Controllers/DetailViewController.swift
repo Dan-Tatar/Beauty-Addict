@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     
     var product : Product?
     let reviewCell = "ReviewCell"
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class DetailViewController: UIViewController {
     
     func setProduct(productDetail: Product?) {
         productName1.text = productDetail?.name
-        productImage1.image = productDetail?.imageProduct
+//        productImage1.image = productDetail?.imageProduct
         productDescription1.text = productDetail?.description
         if let rating = productDetail?.rating {
             productRating1.text = "Rating " + String(rating)
