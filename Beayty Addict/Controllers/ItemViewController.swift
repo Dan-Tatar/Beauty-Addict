@@ -12,6 +12,7 @@ class ItemViewController:  UITableViewController {
     
     var items: [MainCathegories] = []
     let productID =  "productID"
+    var imageDownloaded: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +50,8 @@ extension ItemViewController {
                               print("Error is\(error)")
                             return }
                             DispatchQueue.main.async {
-            
                                 cell?.imageProduct.image = UIImage(data: data!)
-//                                self.imageDownloaded = UIImage(data: data!)
+                                self.imageDownloaded = UIImage(data: data!)
                                   print("Image is\(imageURL)")
                             }
             
@@ -67,7 +67,7 @@ extension ItemViewController {
         let detailViewController = DetailViewController()
         if let selectedRow = tableView.indexPathForSelectedRow {
             detailViewController.product =  items[indexPath.section].products[indexPath.row]
-//            detailViewController.imageDetail = imageDownloaded
+            detailViewController.imageDetail = imageDownloaded
         }
         navigationController?.pushViewController( detailViewController, animated: true)
     }

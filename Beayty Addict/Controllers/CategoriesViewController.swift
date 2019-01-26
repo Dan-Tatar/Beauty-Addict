@@ -12,6 +12,7 @@ class CategoriesViewController: UITableViewController {
     
     var categories = [MainCathegories]()
     let categoryID =  "categoryID"
+    var imageDetail: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()

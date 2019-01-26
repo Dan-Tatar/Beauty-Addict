@@ -50,7 +50,6 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return productReviews?.review.count ?? 1
         return reviews.count
     }
     
