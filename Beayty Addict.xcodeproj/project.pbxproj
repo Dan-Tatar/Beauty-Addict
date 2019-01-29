@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10011F6D21DE99AB00653713 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10011F6C21DE99AB00653713 /* AddReviewView.swift */; };
+		10111AC32200F75200B1074F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10111AC22200F75200B1074F /* Extensions.swift */; };
 		105ED61E20BC4E010058C68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED61D20BC4E010058C68D /* AppDelegate.swift */; };
 		105ED62020BC4E010058C68D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED61F20BC4E010058C68D /* CategoriesViewController.swift */; };
 		105ED62220BC4E010058C68D /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105ED62120BC4E010058C68D /* AddReviewViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		10011F6C21DE99AB00653713 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
+		10111AC22200F75200B1074F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		105ED61A20BC4E010058C68D /* Beayty Addict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beayty Addict.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		105ED61D20BC4E010058C68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105ED61F20BC4E010058C68D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		10111AC12200F72500B1074F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				10111AC22200F75200B1074F /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		1046A08021204B29006CA6F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				105ED61D20BC4E010058C68D /* AppDelegate.swift */,
+				10111AC12200F72500B1074F /* Helpers */,
 				105ED63320BCA8BF0058C68D /* Model */,
 				1046A08021204B29006CA6F5 /* Controllers */,
 				10FC727F20C8690200D6244A /* Views */,
@@ -375,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				107E8C9B215ACBF200BDFE2C /* CollectionViewController.swift in Sources */,
+				10111AC32200F75200B1074F /* Extensions.swift in Sources */,
 				107E8C9921580AD100BDFE2C /* ReviewsViewControllerTableViewController.swift in Sources */,
 				10FC728320D3043B00D6244A /* DetailViewController.swift in Sources */,
 				105ED63920C2F8C50058C68D /* ItemViewController.swift in Sources */,

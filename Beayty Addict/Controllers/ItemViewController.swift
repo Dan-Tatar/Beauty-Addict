@@ -42,20 +42,10 @@ extension ItemViewController {
         cell?.setProducts(list: item)
         cell?.selectionStyle = .none
         let imageURL = item.imageProduct
+      
+        cell?.imageProduct.loadImageUsingCacheWithUlString(urlString: imageURL)
         
-            let url = URL(string: imageURL)
-                        URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-                          print("Data is\(data)")
-                        if error != nil {
-                              print("Error is\(error)")
-                            return }
-                            DispatchQueue.main.async {
-                                cell?.imageProduct.image = UIImage(data: data!)
-                                self.imageDownloaded = UIImage(data: data!)
-                                  print("Image is\(imageURL)")
-                            }
-            
-                        }).resume()
+   
         return cell!
     }
   
