@@ -10,7 +10,7 @@ import UIKit
 
 class ItemViewController:  UITableViewController {
     
-    var  items: [MainCathegories] = []
+    var items: [MainCathegories] = []
     let productID =  "productID"
     
     override func viewDidLoad() {
@@ -40,9 +40,15 @@ extension ItemViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: productID) as? ProductCell
         cell?.setProducts(list: item)
         cell?.selectionStyle = .none
+        
+        let imageURL = item.imageProduct
+       
+        cell?.imageProduct.loadImageUsingCacheWithUlString(urlString: imageURL)
+        var img =  cell?.imageProduct.loadImageUsingCacheWithUlString(urlString: imageURL)
+        
         return cell!
     }
-    
+  
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
@@ -51,6 +57,7 @@ extension ItemViewController {
         let detailViewController = DetailViewController()
         if let selectedRow = tableView.indexPathForSelectedRow {
             detailViewController.product =  items[indexPath.section].products[indexPath.row]
+           
         }
         navigationController?.pushViewController( detailViewController, animated: true)
     }

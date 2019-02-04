@@ -27,14 +27,14 @@ class MainCathegories {
     
     static func mascaraArray() -> MainCathegories {
         var products = [Product]()
-        var maybelline = Product(name: "Maybelline Mascara Lash Sensational",
-                                 imageProduct: #imageLiteral(resourceName: "maybelineMascara"),
-                                 description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
+        var maybelline = Product(name: "Maybelline Lash Sensational Washable Mascara",
+                                 imageProduct: "https://images-na.ssl-images-amazon.com/images/I/815JAlyZm9L._SY355_.jpg",
+                                 description: "Reveal layers of curled lashes for the curvy full fan effect \nThe curved wand stretches every lash, while the curved arch brush grabs each lash from the root and sweeps lashes upwards into the perfect curve ",
                                  rating: 8.8, review: ["This product is really good", "I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky.", "This mascara is actually smaller than I thought it would be when it was received."],
                                  url: "htts://amzn.to/2NS27Hj")
         products.append(maybelline)
         var mascara = Product(name: "Mascara Lash Sensational",
-                              imageProduct: #imageLiteral(resourceName: "mascara"),
+                              imageProduct: "https://cdn11.bigcommerce.com/s-z4n81jv/images/stencil/1280x1280/products/7537/10377/01__05500.1452268721.jpg?c=2&imbypass=on",
                               description: "Liquid ink formula with a low wax count creates black lashes that are dark and defined",
                               rating: 8.8, review: ["I've used this mascara for years and I love it. I often get mistaken for wearing false lashes when I use this. I prefer to use it when the formula gets a little tacky."],
                               url: "https://amzn.to/2NS27Hj")
@@ -45,35 +45,35 @@ class MainCathegories {
     static func lipstickArray() -> MainCathegories {
         
         var products = [Product]()
-        var dior = Product(name: "LipstickDior",
-                           imageProduct: #imageLiteral(resourceName: "lipstickDior"),
-                           description: "Lipstick designed for all lips",
-                           rating: 9.8, review: ["Good product"],
-                           url: "https://amzn.to/2NS27Hj")
-        products.append(dior)
+//        var dior = Product(name: "LipstickDior",
+//                           imageProduct: #imageLiteral(resourceName: "lipstickDior"),
+//                           description: "Lipstick designed for all lips",
+//                           rating: 9.8, review: ["Good product"],
+//                           url: "https://amzn.to/2NS27Hj")
+//        products.append(dior)
         return MainCathegories(category: "Lipstick", image: #imageLiteral(resourceName: "lipstick"), productList: products)
     }
     
     static func foundationArray() -> MainCathegories {
         var products = [Product]()
-        var macFoundation = Product(name: "Mac Foundation",
-                                    imageProduct: #imageLiteral(resourceName: "macFoundation"),
-                                    description: "Foundation without paraben",
-                                    rating: 7.8, review: [""],
-                                    url: "https://amzn.to/2NS27Hj")
-        products.append(macFoundation)
+//        var macFoundation = Product(name: "Mac Foundation",
+//                                    imageProduct: #imageLiteral(resourceName: "macFoundation"),
+//                                    description: "Foundation without paraben",
+//                                    rating: 7.8, review: [""],
+//                                    url: "https://amzn.to/2NS27Hj")
+//        products.append(macFoundation)
         return MainCathegories(category: "Foundation", image: #imageLiteral(resourceName: "foundation"), productList: products)
     }
     
     static func makeupArray() -> MainCathegories {
         
         var products = [Product]()
-        var maybelline = Product(name: "Makeup",
-                                 imageProduct: #imageLiteral(resourceName: "makeUpChanel-1"),
-                                 description: "High quality makeup",
-                                 rating: 4.8, review: [""],
-                                 url: "https://amzn.to/2NS27Hj")
-        products.append(maybelline)
+//        var maybelline = Product(name: "Makeup",
+//                                 imageProduct: #imageLiteral(resourceName: "makeUpChanel-1"),
+//                                 description: "High quality makeup",
+//                                 rating: 4.8, review: [""],
+//                                 url: "https://amzn.to/2NS27Hj")
+//        products.append(maybelline)
         return MainCathegories(category: "Makeup", image: #imageLiteral(resourceName: "makeUp"), productList: products)
     }
 }

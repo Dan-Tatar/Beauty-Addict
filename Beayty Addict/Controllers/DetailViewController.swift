@@ -26,7 +26,9 @@ class DetailViewController: UIViewController {
     
     func setProduct(productDetail: Product?) {
         productName1.text = productDetail?.name
-        productImage1.image = productDetail?.imageProduct
+        if let img = productDetail?.imageProduct {
+            productImage1.loadImageUsingCacheWithUlString(urlString: img)
+        }
         productDescription1.text = productDetail?.description
         if let rating = productDetail?.rating {
             productRating1.text = "Rating " + String(rating)
