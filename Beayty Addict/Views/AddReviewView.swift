@@ -68,6 +68,7 @@ class AddReviewView : UIView {
         name.backgroundColor = UIColor.white
         name.layer.borderColor = UIColor.gray.cgColor
         name.layer.borderWidth = 0.5
+        name.layer.cornerRadius = 10
         return name
     }()
     
@@ -86,6 +87,7 @@ class AddReviewView : UIView {
         rev.backgroundColor = UIColor.white
         rev.layer.borderColor = UIColor.gray.cgColor
         rev.layer.borderWidth = 0.5
+        rev.layer.cornerRadius = 10
         return rev
     }()
     
