@@ -69,6 +69,7 @@ class AddReviewView : UIView {
         name.layer.borderColor = UIColor.gray.cgColor
         name.layer.borderWidth = 0.5
         name.layer.cornerRadius = 10
+        name.clearButtonMode = .always
         return name
     }()
     
@@ -88,6 +89,7 @@ class AddReviewView : UIView {
         rev.layer.borderColor = UIColor.gray.cgColor
         rev.layer.borderWidth = 0.5
         rev.layer.cornerRadius = 10
+        rev.clearButtonMode = .always
         return rev
     }()
     
@@ -127,10 +129,8 @@ class AddReviewView : UIView {
         nameTextField.leftAnchor.constraint(equalTo: reviewUIView.leftAnchor, constant: 12).isActive = true
         nameTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         // ratingTextField constraints
-        //        cosmosView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
         cosmosView.rightAnchor.constraint(equalTo: reviewUIView.rightAnchor, constant: -12).isActive = true
         cosmosView.leftAnchor.constraint(equalTo: nameTextField.rightAnchor, constant: 12).isActive = true
-        //        cosmosView.widthAnchor.constraint(equalTo: reviewTextField.widthAnchor ).isActive = true
         cosmosView.centerYAnchor.constraint(equalTo: nameTextField.centerYAnchor).isActive = true
         // reviewTextField contraints
         reviewTextField.centerYAnchor.constraint(equalTo: reviewUIView.centerYAnchor).isActive = true
