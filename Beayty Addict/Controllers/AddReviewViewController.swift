@@ -83,12 +83,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate {
     }
     // func called when saveButton is pressed
     @objc func savePressed() {
-        
-        
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        reviewTextField.rightViewMode = .never
-        nameTextField.rightViewMode = .never
-        
+
         reviewTextField.layer.borderColor = UIColor.gray.cgColor
         reviewTextField.layer.borderWidth = 0.5
         reviewTextField.placeholder = " Type review"
@@ -99,11 +94,6 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate {
         
         
         guard  nameTextField.text != "" else {
-            
-            imageView.image = #imageLiteral(resourceName: "icons8-error-26")
-            nameTextField.rightView = imageView
-            nameTextField.rightViewMode = .always
-            
             nameTextField.layer.borderColor = UIColor.red.cgColor
             nameTextField.layer.borderWidth = 2
             nameTextField.placeholder = " No text added"
@@ -111,10 +101,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate {
             return
         }
         guard  reviewTextField.text != "" else {
-            
-            imageView.image = #imageLiteral(resourceName: "icons8-error-26")
-            reviewTextField.rightView = imageView
-            reviewTextField.rightViewMode = .always
+ 
             reviewTextField.layer.borderColor = UIColor.red.cgColor
             reviewTextField.layer.borderWidth = 2
             reviewTextField.placeholder = " No text added"
