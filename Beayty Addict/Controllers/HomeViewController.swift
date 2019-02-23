@@ -10,11 +10,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var homeView = HomeView()
+    
+    override func loadView() {
+        view = homeView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         createNavigationTitle()
-        setupViews()
     }
     
     func createNavigationTitle() {
@@ -24,41 +29,5 @@ class HomeViewController: UIViewController {
         titlelabel.font = UIFont.boldSystemFont(ofSize: 20)
         titlelabel.textColor = UIColor.white
         navigationItem.titleView = titlelabel
-    }
-    
-    var beautyImage: UIImageView = {
-        let ip = UIImageView()
-        ip.translatesAutoresizingMaskIntoConstraints = false
-        ip.image = UIImage(named: "beauty")
-        ip.layer.borderColor = UIColor.black.cgColor
-        ip.layer.masksToBounds = true
-        ip.layer.borderWidth = 0.2
-        ip.layer.cornerRadius = 10
-        return ip
-    }()
-    
-    var beautyLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Choose your perfect products"
-        label.font = UIFont (name: "GillSans-SemiBoldItalic", size: 30)
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        return label
-    }()
-    
-    func setupViews() {
-        view.addSubview(beautyImage)
-        view.addSubview(beautyLabel)
-        // constraints beautyImage
-        beautyImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 70).isActive = true
-        beautyImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
-        beautyImage.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5).isActive = true
-        beautyImage.bottomAnchor.constraint(equalTo: beautyLabel.topAnchor, constant: 2).isActive = true
-        // constraints beautyLabel
-        beautyLabel.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        beautyLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        beautyLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 2).isActive = true
-        beautyLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
     }
 }
